@@ -1,4 +1,6 @@
-# Build Harness: The Docker Image for Customizable and Repeatable Build and Test Environments
+# Build Harness: A Docker Image for Customizable and Repeatable Build and Test Environments
+
+_Written by: Andrew Blanchard and Andy Roth_
 
 Build Harness is a Docker image, loaded with an array of tools, built to transform the way you approach your development workflows. The aim? To create repeatable build and test environments, wherever you need them - from setting up a fresh laptop for a new team member to integrating into a Continuous Integration (CI) workflow pipeline.
 
@@ -14,26 +16,20 @@ docker run -it --rm -v "${PWD}:/app" --workdir "/app" ghcr.io/defenseunicorns/bu
 docker run -it --rm -v "${PWD}:/app" --workdir "/app" ghcr.io/defenseunicorns/build-harness/build-harness:<version> bash -c 'go test ./...'
 ```
 
-Or, perhaps a better way is to wrap the command in a Makefile target:
+A more transportable alternative might be to wrap the command in a Makefile target:
 
 ```
 test:
     docker run -it --rm -v "${PWD}:/app" --workdir "/app" ghcr.io/defenseunicorns/build-harness/build-harness:<version> bash -c 'go test ./...'
 ```
 
-Which would let you run:
+Doing so would allow running the same command (`make test`) in your local environment, dev environment, or CI workflow. This results in more  repeatable environments. Stay tuned for a separate blog post that talks about this concept.
 
-```
-make test
-```
-
-> Further Investigation: There are many advantages to wrapping logic with a layer of abstraction like `make`. I can run `make test` locally, and my CI pipeline can run `make test`, and it is all from the same source, which results in yet more repeatable environments. Stay tuned for a separate blog post that talks about this concept.
-
-To get a better idea of what it looks like to use Build Harness operationally, take a look at [this repo](https://github.com/defenseunicorns/terraform-aws-uds-vpc) where it is used. Note the pattern that it uses where a Makefile is used to wrap actions that utilize Build Harness, like `make test` or `make pre-commit-all`.
+To get a better idea of what it looks like to use Build Harness operationally, take a look at [this repo](https://github.com/defenseunicorns/terraform-aws-uds-vpc) where it is used. This pattern uses a Makefile to wrap actions that utilize Build Harness to run `make test` or `make pre-commit-all`.
 
 ## Why Repeatable Environments?
 
-In an increasingly complex and distributed development landscape, the ability to have consistent and repeatable build and test environments has become a non-negotiable requirement. They ensure code behaves the same way across all settings, eliminating the infamous "it works on my machine" scenarios. Having a consistent environment reduces the time spent troubleshooting environment-specific issues and allows teams to focus on what really matters - building great software.
+In an increasingly complex and distributed development landscape, the ability to have consistent and repeatable build and test environments has become a non-negotiable requirement. A common baseline ensures code behaves the same way across all settings, eliminating the infamous "it works on my machine" scenarios. Having a consistent environment reduces the time spent troubleshooting environment-specific issues and allows teams to focus on what really matters - building great software.
 
 ## Why Have Pre-Installed Tools?
 
