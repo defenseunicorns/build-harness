@@ -1,0 +1,10 @@
+* @defenseunicorns/not-a-build-harness
+
+# Privileged Files
+/CODEOWNERS @defenseunicorns/not-a-build-harness-admin
+/LICENSE @defenseunicorns/not-a-build-harness-admin
+/.github/ @defenseunicorns/not-a-build-harness-admin
+/.gitignore @defenseunicorns/not-a-build-harness-admin
+/renovate.json @defenseunicorns/not-a-build-harness-admin
+/renovate.json5 @defenseunicorns/not-a-build-harness-admin
+/Makefile @defenseunicorns/not-a-build-harness-admin
