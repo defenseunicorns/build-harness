@@ -1,7 +1,5 @@
 # Build Harness: A Docker Image for Customizable and Repeatable Build and Test Environments
 
-_Written by: Andrew Blanchard and Andy Roth_
-
 Build Harness is a Docker image, loaded with an array of tools, built to transform the way you approach your development workflows. The aim? To create repeatable build and test environments, wherever you need them - from setting up a fresh laptop for a new team member to integrating into a Continuous Integration (CI) workflow pipeline.
 
 ## Getting Started
