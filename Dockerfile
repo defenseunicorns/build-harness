@@ -1,4 +1,6 @@
-FROM rockylinux:9
+# It doesn't seem like the wolfi base image has any other tags besides "latest" https://edu.chainguard.dev/chainguard/chainguard-images/reference/wolfi-base/image_specs/
+
+FROM cgr.dev/chainguard/wolfi-base:latest
 # Renovate "style" is used for some versioning. See https://docs.renovatebot.com/modules/manager/regex/#advanced-capture
 
 # Make all shells run in a safer way. Ref: https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
