@@ -11,7 +11,7 @@ k9s 0.27.4
 kubectl 1.27.3
 pre-commit 3.3.3
 sops 3.7.3
-terraform 1.5.1
+terraform 1.5.2
 terraform-docs 0.16.0
 tflint 0.47.0
 tfsec 1.28.1
