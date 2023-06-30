@@ -4,6 +4,8 @@ checkov 2.3.234
 flux2 0.41.2
 golang 1.20.5
 golangci-lint 1.53.3
+# renovate: datasource=github-tags depName=anchore/grype
+grype 0.63.1
 hadolint 2.12.0
 helm 3.12.1
 # renovate: datasource=github-tags depName=derailed/k9s
@@ -11,6 +13,8 @@ k9s 0.27.4
 kubectl 1.27.3
 pre-commit 3.3.3
 sops 3.7.3
+# renovate: datasource=github-tags depName=anchore/syft
+syft 0.84.1
 terraform 1.5.2
 terraform-docs 0.16.0
 tflint 0.47.0
