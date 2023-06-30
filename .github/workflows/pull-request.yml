@@ -78,7 +78,7 @@ jobs:
 
       - name: Output image to tarball
         run: |
-          docker save ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.build.outputs.digest }} -o ./image.tar
+          docker save ${{ steps.build.outputs.digest }} -o ./image.tar
 
       - name: Build SBOM
         run: |
