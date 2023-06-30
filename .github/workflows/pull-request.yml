@@ -17,7 +17,7 @@ jobs:
           - linux/amd64
           - linux/arm64/v8
     steps:
-      - name: Convert Platform To Valid Artifact Name
+      - name: Convert platform to valid artifact name
         id: convert-platform
         uses: mad9000/actions-find-and-replace-string@3
         with:
@@ -25,8 +25,28 @@ jobs:
           find: '/'
           replace: '-'
           replaceAll: "true"
+
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Init Docker cache
+        id: init-docker-cache
+        uses: actions/cache@v3
+        with:
+          path: "${{ github.workspace }}/.cache/docker"
+          key: "docker|${{ hashFiles('.env') }}"
+
+      - name: Docker save build harness
+        if: steps.init-docker-cache.outputs.cache-hit != 'true'
+        shell: bash -e -o pipefail {0}
+        run: |
+          make docker-save-build-harness
+
+      - name: Docker load build harness
+        shell: bash -e -o pipefail {0}
+        run: |
+          make docker-load-build-harness
+
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@v4
@@ -34,10 +54,13 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=raw,value=${{ github.ref_name }}
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
+
       - name: Build, don't push
         uses: docker/build-push-action@v4
         with:
@@ -46,9 +69,11 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           outputs: type=docker,dest=./image.tar
           no-cache: true
+
       - name: Build SBOM
         run: |
           make sbom IMAGE_TO_SCAN=docker-archive:./image.tar
+
       - name: Upload SBOM
         uses: actions/upload-artifact@v3
         with:
@@ -59,9 +84,11 @@ jobs:
             sbom.syft.json
             sbom.table.txt
           if-no-files-found: error
+
       - name: Build Vuln Report
         run: |
           make vuln-report
+
       - name: Upload Vuln Report
         uses: actions/upload-artifact@v3
         with:

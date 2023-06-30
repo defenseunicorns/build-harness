@@ -22,6 +22,15 @@ help: ## Show a list of all targets
 	| sed -n 's/^\(.*\): \(.*\)##\(.*\)/\1:\3/p' \
 	| column -t -s ":"
 
+.PHONY: docker-save-build-harness
+docker-save-build-harness: _create-folders ## Pulls the build harness docker image and saves it to a tarball
+	docker pull ${BUILD_HARNESS_REPO}:${BUILD_HARNESS_VERSION}
+	docker save -o .cache/docker/build-harness.tar ${BUILD_HARNESS_REPO}:${BUILD_HARNESS_VERSION}
+
+.PHONY: docker-load-build-harness
+docker-load-build-harness: ## Loads the saved build harness docker image
+	docker load -i .cache/docker/build-harness.tar
+
 .PHONY: sbom
 sbom: ## Generate an SBOM of the given image
 	# Fail if the variable IMAGE_TO_SCAN is not set
