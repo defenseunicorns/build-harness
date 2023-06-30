@@ -48,7 +48,7 @@ jobs:
           no-cache: true
       - name: Build SBOM
         run: |
-          make sbom IMAGE_TO_SBOM=${{env.REGISTRY}}/${{env.IMAGE_NAME}}:local-${{matrix.platform}}
+          make sbom IMAGE_TO_SCAN=${{env.REGISTRY}}/${{env.IMAGE_NAME}}:local-${{matrix.platform}}
       - name: Upload SBOM
         uses: actions/upload-artifact@v3
         with:
