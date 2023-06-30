@@ -43,6 +43,7 @@ jobs:
           make docker-save-build-harness
 
       - name: Docker load build harness
+        if: steps.init-docker-cache.outputs.cache-hit == 'true'
         shell: bash -e -o pipefail {0}
         run: |
           make docker-load-build-harness
