@@ -24,6 +24,7 @@ jobs:
           source: ${{ matrix.platform }}
           find: '/'
           replace: '-'
+          replaceAll: "true"
       - name: Checkout
         uses: actions/checkout@v3
       - name: Extract metadata (tags, labels) for Docker
