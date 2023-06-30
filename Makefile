@@ -22,6 +22,10 @@ help: ## Show a list of all targets
 	| sed -n 's/^\(.*\): \(.*\)##\(.*\)/\1:\3/p' \
 	| column -t -s ":"
 
+.PHONY: _create-folders
+_create-folders:
+	mkdir -p .cache/docker
+
 .PHONY: docker-save-build-harness
 docker-save-build-harness: _create-folders ## Pulls the build harness docker image and saves it to a tarball
 	docker pull ${BUILD_HARNESS_REPO}:${BUILD_HARNESS_VERSION}
