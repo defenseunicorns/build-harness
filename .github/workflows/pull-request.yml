@@ -43,12 +43,11 @@ jobs:
           context: .
           platforms: ${{ matrix.platform }}
           labels: ${{ steps.meta.outputs.labels }}
-          tags: "local-${{matrix.platform}}"
           outputs: type=image,name=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }},push-by-digest=true,name-canonical=true,push=false
           no-cache: true
       - name: Build SBOM
         run: |
-          make sbom IMAGE_TO_SCAN=${{env.REGISTRY}}/${{env.IMAGE_NAME}}:local-${{matrix.platform}}
+          make sbom IMAGE_TO_SCAN=${{env.REGISTRY}}/${{env.IMAGE_NAME}}@${{ steps.build.outputs.digest }}
       - name: Upload SBOM
         uses: actions/upload-artifact@v3
         with:
