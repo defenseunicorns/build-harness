@@ -106,3 +106,62 @@ jobs:
       - name: Inspect image
         run: |
           docker buildx imagetools inspect ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.version }}
+
+  scan:
+    runs-on: ubuntu-latest
+    needs:
+      - merge
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Init Docker cache
+        id: init-docker-cache
+        uses: actions/cache@v3
+        with:
+          path: "${{ github.workspace }}/.cache/docker"
+          key: "docker|${{ hashFiles('.env') }}"
+
+      - name: Docker save build harness
+        if: steps.init-docker-cache.outputs.cache-hit != 'true'
+        shell: bash -e -o pipefail {0}
+        run: |
+          make docker-save-build-harness
+
+      - name: Docker load build harness
+        if: steps.init-docker-cache.outputs.cache-hit == 'true'
+        shell: bash -e -o pipefail {0}
+        run: |
+          make docker-load-build-harness
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=${{ github.ref_name }}
+
+      - name: Build SBOM
+        run: |
+          make sbom IMAGE_TO_SCAN=docker:${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.version }}
+
+      - name: Upload SBOM
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            sbom.cyclonedx.json
+            sbom.spdx.json
+            sbom.syft.json
+            sbom.table.txt
+
+      - name: Build Vuln Report
+        run: |
+          make vuln-report
+
+      - name: Upload Vuln Report
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            vulns.grype.json
+            vulns.grype.txt
