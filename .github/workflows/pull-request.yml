@@ -36,7 +36,7 @@ jobs:
           context: .
           platforms: ${{ matrix.platform }}
           labels: ${{ steps.meta.outputs.labels }}
-          outputs: type=local,dest=./image.tar
+          outputs: type=docker,dest=./image.tar
           no-cache: true
       - name: Build SBOM
         run: |
