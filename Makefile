@@ -35,7 +35,7 @@ sbom: ## Generate an SBOM of the given image
 		bash -c 'syft "${IMAGE_TO_SCAN}" -o json=sbom.syft.json -o cyclonedx-json=sbom.cyclonedx.json -o spdx-json=sbom.spdx.json -o syft-table=sbom.table.txt'
 
 .PHONY: vuln-report
-vuln-report: ## Generate the vuln report of the given image
+vuln-report: ## Generate the vuln report from the sbom.syft.json file
 	# Fail if the file sbom.syft.json does not exist
 	$(if $(wildcard sbom.syft.json),,$(error sbom.syft.json does not exist))
 	# Generate the vuln report. Use Docker for maximum portability
