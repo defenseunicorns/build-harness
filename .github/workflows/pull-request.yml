@@ -62,14 +62,23 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
+#      - name: Output build to tarball
+#        run: |
+#          docker save ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.build.outputs.digest }} -o ./image.tar
+
       - name: Build, don't push
+        id: build
         uses: docker/build-push-action@v4
         with:
           context: .
           platforms: ${{ matrix.platform }}
           labels: ${{ steps.meta.outputs.labels }}
-          outputs: type=docker,dest=./image.tar
+          outputs: type=image,name=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }},push-by-digest=true,name-canonical=true,push=false
           no-cache: true
+
+      - name: Output image to tarball
+        run: |
+          docker save ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.build.outputs.digest }} -o ./image.tar
 
       - name: Build SBOM
         run: |
