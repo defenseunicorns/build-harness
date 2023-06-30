@@ -1,5 +1,5 @@
 #stolen from here: https://docs.docker.com/build/ci/github-actions/multi-platform/#distribute-build-across-multiple-runners
-name: "Release: Build and push the image on new tag creation"
+name: tag-push
 
 on:
   push:
