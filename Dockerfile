@@ -20,36 +20,49 @@ RUN apk add \
     git \
     curl \
     py3-pip \  
-    # bind-utils \
+    # bind-utils  the analogous package seems to be bind-tools
+    bind-tools \ 
     bzip2 \
-    # bzip2-devel \
+    # bzip2-devel  the analogous package seems to be bzip2-dev
+    bzip2-dev \
     findutils \
     gcc \
-    # gcc-c++ \
+    # gcc-c++ the analogous package seems to be libstdc++
+    libstdc++ \
     gettext \
-    # git \
-    # iptables-nft \
+    # iptables-nft the analogous package seems to be contained within iptables
+    iptables \ 
     jq \
-    # libffi-devel \
-    # libxslt-devel \
+    # libffi-devel the analogous package seems to be libffi-dev
+    libffi-dev \
+    # libxslt-devel the analogous package seems to be libxslt-dev
+    libxslt-dev \
     make \
-    # nc \
-    # ncurses-devel \
+    # nc the analogous package seems to be netcat-openbsd
+    netcat-openbsd \
+    # ncurses-devel the analogous package seems to be ncurses-dev
+    ncurses-dev \ 
     openldap-clients \
-    # openssl-devel \
-    # perl-Digest-SHA \
-    # procps-ng \
-    # python3-pip \
-    # readline-devel \
-    # sqlite-devel \
+    # openssl-devel the analogous package seems to be openssl-dev
+    openssl-dev \ 
+    # perl-Digest-SHA no pacakge found
+    # procps-ng there is a procps package but not procps-ng
+    procps \ 
+    # readline-devel the analogous package seems to be readline-dev
+    readline-dev \ 
+    # sqlite-devel the analogous package seems to be sqlite-dev
+    sqlite-dev \ 
     sshpass \
-    # unzip \
-    wget 
-    # which \
-    # xz \
+    # unzip this is already present in the image:
+    #     8e347e3b0047:/# which unzip
+    # /usr/bin/unzip
+    wget \
+    # which  is already present in the image
+    # xz  already present in the image
 #   "${SSM_PLUGIN_URL}" \
   # && dnf clean all \
   # && rm -rf /var/cache/yum/
+    && apk cache clean
 
 # Install asdf. Get versions from https://github.com/asdf-vm/asdf/releases
 # hadolint ignore=SC2016
