@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Convert platform to valid artifact name
         id: convert-platform
-        uses: mad9000/actions-find-and-replace-string@3
+        uses: mad9000/actions-find-and-replace-string@4
         with:
           source: ${{ matrix.platform }}
           find: '/'
