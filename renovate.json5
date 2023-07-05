@@ -39,6 +39,15 @@
     enabled: true
   },
   "regexManagers": [
+    // Custom regex manager for the .env file that follows the pattern documented here: https://docs.renovatebot.com/modules/manager/regex/#advanced-capture
+    {
+      "fileMatch": ["^.env"],
+      "matchStrings": [
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?_VERSION=(?<currentValue>.*)\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}",
+      "extractVersionTemplate": "^v?(?<version>.*)$"
+    },
     // Custom regex manager for the Dockerfile that follows the pattern documented here: https://docs.renovatebot.com/modules/manager/regex/#advanced-capture
     {
       "fileMatch": ["^Dockerfile$"],

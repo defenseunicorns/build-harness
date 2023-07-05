@@ -1,0 +1,102 @@
+name: pull-request
+
+on:
+  pull_request:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}/build-harness
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        platform:
+          - linux/amd64
+          - linux/arm64/v8
+    steps:
+      - name: Convert platform to valid artifact name
+        id: convert-platform
+        uses: mad9000/actions-find-and-replace-string@3
+        with:
+          source: ${{ matrix.platform }}
+          find: '/'
+          replace: '-'
+          replaceAll: "true"
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Init Docker cache
+        id: init-docker-cache
+        uses: actions/cache@v3
+        with:
+          path: "${{ github.workspace }}/.cache/docker"
+          key: "docker|${{ hashFiles('.env') }}"
+
+      - name: Docker save build harness
+        if: steps.init-docker-cache.outputs.cache-hit != 'true'
+        shell: bash -e -o pipefail {0}
+        run: |
+          make docker-save-build-harness
+
+      - name: Docker load build harness
+        if: steps.init-docker-cache.outputs.cache-hit == 'true'
+        shell: bash -e -o pipefail {0}
+        run: |
+          make docker-load-build-harness
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=${{ github.ref_name }}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build image to tarball
+        id: build
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          platforms: ${{ matrix.platform }}
+          labels: ${{ steps.meta.outputs.labels }}
+          outputs: type=docker,dest=./image.tar
+          no-cache: true
+
+      - name: Build SBOM
+        run: |
+          make sbom IMAGE_TO_SCAN=docker-archive:./image.tar
+
+      - name: Upload SBOM
+        uses: actions/upload-artifact@v3
+        with:
+          name: sbom-${{steps.convert-platform.outputs.value}}
+          path: |
+            sbom.cyclonedx.json
+            sbom.spdx.json
+            sbom.syft.json
+            sbom.table.txt
+          if-no-files-found: error
+
+      - name: Build Vuln Report
+        run: |
+          make vuln-report
+
+      - name: Upload Vuln Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: vuln-report-${{steps.convert-platform.outputs.value}}
+          path: |
+            vulns.grype.json
+            vulns.grype.txt
+          if-no-files-found: error
+

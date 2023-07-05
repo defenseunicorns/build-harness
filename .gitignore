@@ -1,1 +1,7 @@
 .idea/
+sbom.cyclonedx.json
+sbom.spdx.json
+sbom.syft.json
+sbom.table.txt
+vulns.grype.json
+vulns.grype.txt
