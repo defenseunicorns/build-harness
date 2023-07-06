@@ -1,0 +1,9 @@
+# Renovate handles app updates for us
+check-for-app-update: false
+
+# Automatically generate CPEs when packages have none
+add-cpes-if-none: true
+
+ignore:
+  # CVE-2018-9057 is a false positive. See https://github.com/anchore/grype/issues/1377.
+  - vulnerability: CVE-2018-9057
