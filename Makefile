@@ -56,5 +56,5 @@ vuln-report: ## Generate the vuln report from the sbom.syft.json file
 		-v "${PWD}:/app" \
 		--workdir "/app" \
 		${BUILD_HARNESS_REPO}:${BUILD_HARNESS_VERSION} \
-		bash -c 'cat ./sbom.syft.json | grype --add-cpes-if-none -o json --file vulns.grype.json \
-				&& cat ./sbom.syft.json | grype --add-cpes-if-none -o table --file vulns.grype.txt'
+		bash -c 'cat ./sbom.syft.json | grype -c ./.grype.yaml -o json --file vulns.grype.json \
+				&& cat ./sbom.syft.json | grype -c ./.grype.yaml -o table --file vulns.grype.txt'
