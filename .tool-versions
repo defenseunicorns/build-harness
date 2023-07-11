@@ -19,5 +19,5 @@ terraform 1.5.2
 terraform-docs 0.16.0
 tflint 0.47.0
 tfsec 1.28.1
-# renovate: datasource=github-tags depName=defenseunicorns/zarf
+# renovate: datasource=github-releases depName=defenseunicorns/zarf
 zarf 0.28.1
