@@ -5,6 +5,7 @@ FROM rockylinux:9
 SHELL [ "/bin/bash", "-euxo", "pipefail", "-c" ]
 
 # Install rpm packages that we need. AWS Session Manager Plugin is not published in any repo that we can use, so we grab it directly from where they publish it in S3.
+# Also install/upgrade pip, setuptools, and wheel to ensure that we are able to build from source any Python packages that we need. (Checkov needs this in the ARM build)
 # hadolint ignore=DL3041
 RUN ARCH_STRING=$(uname -m) \
   && if [ "$ARCH_STRING" = "x86_64" ]; then \
@@ -42,7 +43,8 @@ RUN ARCH_STRING=$(uname -m) \
     xz \
   "${SSM_PLUGIN_URL}" \
   && dnf clean all \
-  && rm -rf /var/cache/yum/
+  && rm -rf /var/cache/yum/ \
+  && pip3 install --upgrade pip setuptools wheel
 
 # Install asdf. Get versions from https://github.com/asdf-vm/asdf/releases
 # hadolint ignore=SC2016
