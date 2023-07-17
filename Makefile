@@ -45,7 +45,8 @@ sbom: ## Generate an SBOM of the given image
 		-v "${PWD}:/app" \
 		--workdir "/app" \
 		${BUILD_HARNESS_REPO}:${BUILD_HARNESS_VERSION} \
-		bash -c 'syft "${IMAGE_TO_SCAN}" -o json=sbom.syft.json -o cyclonedx-json=sbom.cyclonedx.json -o spdx-json=sbom.spdx.json -o syft-table=sbom.table.txt'
+		bash -c 'asdf install syft \
+				&& syft "${IMAGE_TO_SCAN}" -o json=sbom.syft.json -o cyclonedx-json=sbom.cyclonedx.json -o spdx-json=sbom.spdx.json -o syft-table=sbom.table.txt'
 
 .PHONY: vuln-report
 vuln-report: ## Generate the vuln report from the sbom.syft.json file
@@ -56,5 +57,6 @@ vuln-report: ## Generate the vuln report from the sbom.syft.json file
 		-v "${PWD}:/app" \
 		--workdir "/app" \
 		${BUILD_HARNESS_REPO}:${BUILD_HARNESS_VERSION} \
-		bash -c 'cat ./sbom.syft.json | grype -c ./.grype.yaml -o json --file vulns.grype.json \
+		bash -c 'asdf install grype \
+				&& cat ./sbom.syft.json | grype -c ./.grype.yaml -o json --file vulns.grype.json \
 				&& cat ./sbom.syft.json | grype -c ./.grype.yaml -o table --file vulns.grype.txt'
