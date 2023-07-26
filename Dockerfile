@@ -16,6 +16,7 @@ RUN ARCH_STRING=$(uname -m) \
     bind-utils \
     bzip2 \
     bzip2-devel \
+    'dnf-command(config-manager)' \
     findutils \
     gcc \
     gcc-c++ \
@@ -43,6 +44,16 @@ RUN ARCH_STRING=$(uname -m) \
   "${SSM_PLUGIN_URL}" \
   && dnf clean all \
   && rm -rf /var/cache/yum/
+
+# Install Docker. To use Docker you need to run the 'docker run' command with '-v /var/run/docker.sock:/var/run/docker.sock' to mount the docker socket into the container.
+# WARNING: This is a security risk that requires other mitigations to be in place. See https://stackoverflow.com/a/41822163. Doing so will give the container root access to the host machine.
+# No additional security risk is posed if this container is run without mounting the docker socket.
+# It is our belief that this is safe to do on GitHub Actions hosted runners, since it is GitHub's own infrastructure that would be at risk if they didn't mitigate what would otherwise be an incredibly easy to exploit security hole.
+# This is NOT regarded as safe to do on self-hosted runners without having taken some other mitigation step first.
+RUN dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo \
+    && dnf install -y docker-ce docker-ce-cli containerd.io \
+    && dnf clean all \
+    && rm -rf /var/cache/yum/
 
 # Install asdf. Get versions from https://github.com/asdf-vm/asdf/releases
 # hadolint ignore=SC2016

@@ -131,3 +131,7 @@ A: Currently we require that each Pull Request runs a workflow that builds the B
 **Q: Build Harness doesn't have a tool that I need. Can I get it added?**
 
 A: Yes! Please submit a GitHub Issue [here](https://github.com/defenseunicorns/build-harness/issues/new/choose).
+
+**Q: I see that Docker is installed. Isn't that dangerous?**
+
+A: Mounting the Docker Socket is a security risk that requires other mitigations to be in place. See https://stackoverflow.com/a/41822163. Doing so will give the container root access to the host machine. No additional security risk is posed if this container is run without mounting the docker socket. It is our belief that this is safe to do on GitHub Actions hosted runners, since it is GitHub's own infrastructure that would be at risk if they didn't mitigate what would otherwise be an incredibly easy to exploit security hole. This is NOT regarded as safe to do on self-hosted runners without having taken some other mitigation step first.
