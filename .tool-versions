@@ -4,7 +4,7 @@ aws-nuke 2.23.0
 awscli 2.13.5
 checkov 2.3.234
 flux2 2.0.1
-golang 1.20.6
+golang 1.20.7
 golangci-lint 1.53.3
 # renovate: datasource=github-tags depName=anchore/grype
 grype 0.65.0
