@@ -4,6 +4,8 @@ Build Harness is a Docker image, loaded with an array of tools, built to transfo
 
 ## Getting Started
 
+### Using Build Harness
+
 Getting started with Build Harness is as easy as running `docker run`. Here's an example from the perspective of how somebody might use it in a setting where a Golang application is being developed.
 
 ```
@@ -24,6 +26,10 @@ test:
 Doing so would allow running the same command (`make test`) in your local environment, dev environment, or CI workflow. This results in more  repeatable environments. Stay tuned for a separate blog post that talks about this concept.
 
 To get a better idea of what it looks like to use Build Harness operationally, take a look at [this repo](https://github.com/defenseunicorns/terraform-aws-uds-vpc) where it is used. This pattern uses a Makefile to wrap actions that utilize Build Harness to run `make test` or `make pre-commit-all`.
+
+### Contributing to Build Harness
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on how to contribute to Build Harness.
 
 ## Why Repeatable Environments?
 
