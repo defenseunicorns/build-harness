@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.10.2](https://github.com/defenseunicorns/build-harness/compare/1.10.1...1.10.2) (2023-08-02)
+
+
+### Miscellaneous Chores
+
+* **deps:** update golang to 1.20.7 ([#86](https://github.com/defenseunicorns/build-harness/issues/86)) ([18854c6](https://github.com/defenseunicorns/build-harness/commit/18854c687ce3b0adfa10547abd95fa696ef0b508))
+* **deps:** update internal use of build-harness to 1.10.1 ([#86](https://github.com/defenseunicorns/build-harness/issues/86)) ([18854c6](https://github.com/defenseunicorns/build-harness/commit/18854c687ce3b0adfa10547abd95fa696ef0b508))
+
 ## 1.10.1 (2023-08-01)
 
 
