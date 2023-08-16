@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.10.3](https://github.com/defenseunicorns/build-harness/compare/1.10.2...1.10.3) (2023-08-16)
+
+
+### Miscellaneous Chores
+
+* **deps:** Help Renovate get around Checkov's IP block ([#87](https://github.com/defenseunicorns/build-harness/issues/87)) ([1015406](https://github.com/defenseunicorns/build-harness/commit/10154065bb92dd214373d84403f55723f2a1b44e))
+* **deps:** update anchore/grype from 0.65.0 to 0.65.1 ([a0dd678](https://github.com/defenseunicorns/build-harness/commit/a0dd678e0fb6eee8f1226f97b9fb31cde15d6c64))
+* **deps:** update awscli from 2.13.5 to 2.13.9 ([a0dd678](https://github.com/defenseunicorns/build-harness/commit/a0dd678e0fb6eee8f1226f97b9fb31cde15d6c64))
+* **deps:** update bridgecrewio/checkov from 2.3.234 to 2.4.1 ([a0dd678](https://github.com/defenseunicorns/build-harness/commit/a0dd678e0fb6eee8f1226f97b9fb31cde15d6c64))
+* **deps:** update defenseunicorns/build-harness from 1.10.1 to 1.10.2 ([a0dd678](https://github.com/defenseunicorns/build-harness/commit/a0dd678e0fb6eee8f1226f97b9fb31cde15d6c64))
+* **deps:** update defenseunicorns/zarf from 0.28.3 to 0.29.0 ([a0dd678](https://github.com/defenseunicorns/build-harness/commit/a0dd678e0fb6eee8f1226f97b9fb31cde15d6c64))
+* **deps:** update golang from 1.20.7 to 1.21.0 ([a0dd678](https://github.com/defenseunicorns/build-harness/commit/a0dd678e0fb6eee8f1226f97b9fb31cde15d6c64))
+* **deps:** update golangci-lint from 1.53.3 to 1.54.1 ([a0dd678](https://github.com/defenseunicorns/build-harness/commit/a0dd678e0fb6eee8f1226f97b9fb31cde15d6c64))
+* **deps:** update helm from 3.12.2 to 3.12.3 ([a0dd678](https://github.com/defenseunicorns/build-harness/commit/a0dd678e0fb6eee8f1226f97b9fb31cde15d6c64))
+* **deps:** update k3d-io/k3d from 5.5.1 to 5.5.2 ([a0dd678](https://github.com/defenseunicorns/build-harness/commit/a0dd678e0fb6eee8f1226f97b9fb31cde15d6c64))
+* **deps:** update kubectl from 1.27.4 to 1.28.0 ([a0dd678](https://github.com/defenseunicorns/build-harness/commit/a0dd678e0fb6eee8f1226f97b9fb31cde15d6c64))
+* **deps:** update rebuy-de/aws-nuke from 2.23.0 to 2.24.1 ([a0dd678](https://github.com/defenseunicorns/build-harness/commit/a0dd678e0fb6eee8f1226f97b9fb31cde15d6c64))
+* **deps:** update terraform from 1.5.4 to 1.5.5 ([a0dd678](https://github.com/defenseunicorns/build-harness/commit/a0dd678e0fb6eee8f1226f97b9fb31cde15d6c64))
+
 ## [1.10.2](https://github.com/defenseunicorns/build-harness/compare/1.10.1...1.10.2) (2023-08-02)
 
 
