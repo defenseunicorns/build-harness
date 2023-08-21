@@ -1,25 +1,25 @@
 adr-tools 3.0.0
 # renovate: datasource=github-releases depName=rebuy-de/aws-nuke
 aws-nuke 2.24.1
-awscli 2.13.9
+awscli 2.13.11
 # renovate: datasource=git-tags depName=https://github.com/bridgecrewio/checkov.git
-checkov 2.4.1
+checkov 2.4.5
 flux2 2.0.1
 golang 1.21.0
-golangci-lint 1.54.1
+golangci-lint 1.54.2
 # renovate: datasource=github-tags depName=anchore/grype
-grype 0.65.1
+grype 0.65.2
 hadolint 2.12.0
 helm 3.12.3
 # renovate: datasource=github-releases depName=k3d-io/k3d
-k3d 5.5.2
+k3d 5.6.0
 # renovate: datasource=github-tags depName=derailed/k9s
 k9s 0.27.4
 kubectl 1.28.0
 pre-commit 3.3.3
 sops 3.7.3
 # renovate: datasource=github-tags depName=anchore/syft
-syft 0.87.0
+syft 0.87.1
 terraform 1.5.5
 terraform-docs 0.16.0
 tflint 0.47.0
