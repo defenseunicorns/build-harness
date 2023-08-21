@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.10.4](https://github.com/defenseunicorns/build-harness/compare/1.10.3...1.10.4) (2023-08-21)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency anchore/grype from v0.65.1 to v0.65.2 ([8e69f1f](https://github.com/defenseunicorns/build-harness/commit/8e69f1f32f38082a42c880c2fa0f2a5c15b7d953))
+* **deps:** update dependency anchore/syft from v0.87.0 to v0.87.1 ([8e69f1f](https://github.com/defenseunicorns/build-harness/commit/8e69f1f32f38082a42c880c2fa0f2a5c15b7d953))
+* **deps:** update dependency awscli from v2.13.9 to v2.13.11 ([8e69f1f](https://github.com/defenseunicorns/build-harness/commit/8e69f1f32f38082a42c880c2fa0f2a5c15b7d953))
+* **deps:** update dependency bridgecrewio/checkov from v2.4.1 to v2.4.5 ([8e69f1f](https://github.com/defenseunicorns/build-harness/commit/8e69f1f32f38082a42c880c2fa0f2a5c15b7d953))
+* **deps:** update dependency defenseunicorns/build-harness from v1.10.2 to v1.10.3 ([8e69f1f](https://github.com/defenseunicorns/build-harness/commit/8e69f1f32f38082a42c880c2fa0f2a5c15b7d953))
+* **deps:** update dependency golangci-lint from v1.54.1 to v1.54.2 ([8e69f1f](https://github.com/defenseunicorns/build-harness/commit/8e69f1f32f38082a42c880c2fa0f2a5c15b7d953))
+* **deps:** update dependency k3d-io/k3d from v5.5.2 to v5.6.0 ([8e69f1f](https://github.com/defenseunicorns/build-harness/commit/8e69f1f32f38082a42c880c2fa0f2a5c15b7d953))
+
 ## [1.10.3](https://github.com/defenseunicorns/build-harness/compare/1.10.2...1.10.3) (2023-08-16)
 
 
