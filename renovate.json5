@@ -13,7 +13,7 @@
     // Apply crowd-sourced package replacement rules. See https://docs.renovatebot.com/presets-replacements/#replacementsall
     "replacements:all",
     // Apply crowd-sourced workarounds for known problems with packages. See https://docs.renovatebot.com/presets-workarounds/#workaroundsall
-    "workarounds:all",
+    "workarounds:all"
   ],
   // If we don't specify a timezone then Renovate will use UTC
   timezone: "America/New_York",
@@ -65,6 +65,12 @@
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}",
       "extractVersionTemplate": "^v?(?<version>.*)$"
+    }
+  ],
+  packageRules: [
+    {
+      matchPackageNames: ["terraform"],
+      allowedVersions: "<1.6.0"
     }
   ]
 }
