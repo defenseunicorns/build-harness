@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.10.5](https://github.com/defenseunicorns/build-harness/compare/1.10.4...1.10.5) (2023-09-11)
+
+
+### Miscellaneous Chores
+
+* **deps:** constrain Terraform version to avoid using BSL-licensed versions ([#96](https://github.com/defenseunicorns/build-harness/issues/96)) ([3402956](https://github.com/defenseunicorns/build-harness/commit/3402956e3601974332ad055913b7e6d322b97067))
+* **deps:** update all dependencies ([#93](https://github.com/defenseunicorns/build-harness/issues/93)) ([69972c4](https://github.com/defenseunicorns/build-harness/commit/69972c441e56a0b0d9387d2e5605c4932a58b5b5))
+* **deps:** update all dependencies ([#94](https://github.com/defenseunicorns/build-harness/issues/94)) ([99521c8](https://github.com/defenseunicorns/build-harness/commit/99521c8e691c3c1038ddf81db556c41d568967f3))
+* **deps:** update all dependencies ([#97](https://github.com/defenseunicorns/build-harness/issues/97)) ([9cc9643](https://github.com/defenseunicorns/build-harness/commit/9cc9643b9f2de568e307127b051398d5c96ab3e8))
+
 ## [1.10.4](https://github.com/defenseunicorns/build-harness/compare/1.10.3...1.10.4) (2023-08-21)
 
 
