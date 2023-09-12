@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.11.0](https://github.com/defenseunicorns/build-harness/compare/1.10.5...1.11.0) (2023-09-12)
+
+
+### Features
+
+* install OpenTF from source ([#100](https://github.com/defenseunicorns/build-harness/issues/100)) ([f4e2508](https://github.com/defenseunicorns/build-harness/commit/f4e250848f843f42ba7af8bd2216cc2f75b01ead))
+
+
+### Miscellaneous Chores
+
+* add support for using Merge Queue ([#101](https://github.com/defenseunicorns/build-harness/issues/101)) ([44441e1](https://github.com/defenseunicorns/build-harness/commit/44441e1e8558ac9bcd748817ba70f86715fb300f))
+* **deps:** update all dependencies ([#99](https://github.com/defenseunicorns/build-harness/issues/99)) ([37a58fb](https://github.com/defenseunicorns/build-harness/commit/37a58fbb574f9c22346d56b166a3903fc6c2f89d))
+
 ## [1.10.5](https://github.com/defenseunicorns/build-harness/compare/1.10.4...1.10.5) (2023-09-11)
 
 
