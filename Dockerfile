@@ -81,6 +81,14 @@ RUN asdf install
 ENV SSHUTTLE_VERSION=1.1.1
 RUN pip install --force-reinstall -v "sshuttle==${SSHUTTLE_VERSION}"
 
+# Install OpenTF. There's no released versions yet so we are building this from source.
+# TODO: Switch to a released version/binary once they are available
+RUN git clone https://github.com/opentffoundation/opentf.git /root/opentf \
+  && cd root/opentf \
+  && go install . \
+  && ln -s $(go env GOPATH)/bin/opentf /usr/local/bin/opentf
+
+
 # Support tools installed as root when running as any other user
 ENV ASDF_DATA_DIR="/root/.asdf"
 
