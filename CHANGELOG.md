@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.1](https://github.com/defenseunicorns/build-harness/compare/1.11.0...1.11.1) (2023-09-13)
+
+
+### Miscellaneous Chores
+
+* change how OpenTF is being installed in order to reduce image size ([#105](https://github.com/defenseunicorns/build-harness/issues/105)) ([6f2aef2](https://github.com/defenseunicorns/build-harness/commit/6f2aef23c8275f69ae8d32fe0e6457b02deab63d))
+
 ## [1.11.0](https://github.com/defenseunicorns/build-harness/compare/1.10.5...1.11.0) (2023-09-12)
 
 
