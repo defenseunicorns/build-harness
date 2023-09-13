@@ -1,3 +1,5 @@
+FROM cgr.dev/chainguard/opentf as opentf
+
 FROM rockylinux:9
 # Renovate "style" is used for some versioning. See https://docs.renovatebot.com/modules/manager/regex/#advanced-capture
 
@@ -81,13 +83,9 @@ RUN asdf install
 ENV SSHUTTLE_VERSION=1.1.1
 RUN pip install --force-reinstall -v "sshuttle==${SSHUTTLE_VERSION}"
 
-# Install OpenTF. There's no released versions yet so we are building this from source.
+# Install OpenTF. They haven't released any official versions yet so we're grabing it from chainguard's opentf:latest image
 # TODO: Switch to a released version/binary once they are available
-RUN git clone https://github.com/opentffoundation/opentf.git /root/opentf \
-  && cd root/opentf \
-  && go install . \
-  && ln -s $(go env GOPATH)/bin/opentf /usr/local/bin/opentf
-
+COPY --from=opentf /usr/bin/opentf /usr/local/bin/opentf
 
 # Support tools installed as root when running as any other user
 ENV ASDF_DATA_DIR="/root/.asdf"
