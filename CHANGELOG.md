@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.11.2](https://github.com/defenseunicorns/build-harness/compare/1.11.1...1.11.2) (2023-09-19)
+
+
+### Miscellaneous Chores
+
+* **deps:** update all dependencies ([#104](https://github.com/defenseunicorns/build-harness/issues/104)) ([731e0ca](https://github.com/defenseunicorns/build-harness/commit/731e0ca56a8605f7a1cdc3f7b6e8e9bcd4f3f025))
+* **deps:** update all dependencies ([#108](https://github.com/defenseunicorns/build-harness/issues/108)) ([dac0193](https://github.com/defenseunicorns/build-harness/commit/dac01939847e774e9dc9d36706bbb70b2b0440ab))
+* **deps:** update all dependencies ([#109](https://github.com/defenseunicorns/build-harness/issues/109)) ([7da5389](https://github.com/defenseunicorns/build-harness/commit/7da53899adc95baf3bd5c4644eb55da209eb23f1))
+
 ## [1.11.1](https://github.com/defenseunicorns/build-harness/compare/1.11.0...1.11.1) (2023-09-13)
 
 
