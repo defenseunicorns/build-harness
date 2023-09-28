@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.12.0](https://github.com/defenseunicorns/build-harness/compare/1.11.2...1.12.0) (2023-09-28)
+
+
+### Features
+
+* add dagger ([#114](https://github.com/defenseunicorns/build-harness/issues/114)) ([ec13052](https://github.com/defenseunicorns/build-harness/commit/ec13052eebd1c9cfb76da91478719b272f41e19a))
+
+
+### Miscellaneous Chores
+
+* **deps:** update all dependencies ([#110](https://github.com/defenseunicorns/build-harness/issues/110)) ([44c8a98](https://github.com/defenseunicorns/build-harness/commit/44c8a98bd85b91bfaccf30b146ab15e23d430141))
+
 ## [1.11.2](https://github.com/defenseunicorns/build-harness/compare/1.11.1...1.11.2) (2023-09-19)
 
 
