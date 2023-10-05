@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.12.2](https://github.com/defenseunicorns/build-harness/compare/1.12.1...1.12.2) (2023-10-05)
+
+
+### Miscellaneous Chores
+
+* **deps:** update all dependencies ([#116](https://github.com/defenseunicorns/build-harness/issues/116)) ([a2ed1f2](https://github.com/defenseunicorns/build-harness/commit/a2ed1f24ec7ecc22bdc0b90115eada3abd98d6d0))
+* migrate to narwhal-bot ([#118](https://github.com/defenseunicorns/build-harness/issues/118)) ([013e0d0](https://github.com/defenseunicorns/build-harness/commit/013e0d009b09afaad1d0c6c8ad0f67e682951cc8))
+
 ## [1.12.1](https://github.com/defenseunicorns/build-harness/compare/1.12.0...1.12.1) (2023-10-04)
 
 
