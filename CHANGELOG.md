@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.13.0](https://github.com/defenseunicorns/build-harness/compare/1.12.2...1.13.0) (2023-10-10)
+
+
+### Features
+
+* add git-xargs ([#126](https://github.com/defenseunicorns/build-harness/issues/126)) ([992417c](https://github.com/defenseunicorns/build-harness/commit/992417cb53cf85d6985e2a2a38b5c682653af2b3))
+
+
+### Miscellaneous Chores
+
+* **deps:** update all dependencies ([#122](https://github.com/defenseunicorns/build-harness/issues/122)) ([c838934](https://github.com/defenseunicorns/build-harness/commit/c838934193536e1b19a28f3fc9ef0c71a02c0cc9))
+* **deps:** update all dependencies ([#123](https://github.com/defenseunicorns/build-harness/issues/123)) ([814174c](https://github.com/defenseunicorns/build-harness/commit/814174c8a2262bc947a0c6588f4ed5b27a006e1a))
+* **deps:** update dependency https://github.com/bridgecrewio/checkov.git to v2.5.6 ([#120](https://github.com/defenseunicorns/build-harness/issues/120)) ([91380aa](https://github.com/defenseunicorns/build-harness/commit/91380aa96e74341638951e3a16525e89b52d91dd))
+
 ## [1.12.2](https://github.com/defenseunicorns/build-harness/compare/1.12.1...1.12.2) (2023-10-05)
 
 
