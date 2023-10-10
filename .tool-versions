@@ -28,3 +28,5 @@ tflint 0.48.0
 tfsec 1.28.4
 # renovate: datasource=github-releases depName=defenseunicorns/zarf
 zarf 0.30.0
+# renovate: datasource=github-tags depName=gruntwork-io/git-xargs
+git-xargs 0.1.10
