@@ -75,7 +75,7 @@ RUN asdf plugin add zarf https://github.com/defenseunicorns/asdf-zarf.git
 # git-xargs needs to be added separately since it doesn't have a "shortform" option in the asdf registry yet
 RUN asdf plugin add git-xargs https://github.com/defenseunicorns/asdf-git-xargs.git
 # Install all other ASDF plugins that are present in the .tool-versions file.
-RUN cat /root/.tool-versions | cut -d' ' -f1 | grep "^[^\#]" | grep -v "zarf" | xargs -i asdf plugin add {}
+RUN cat /root/.tool-versions | cut -d' ' -f1 | grep "^[^\#]" | grep -v "zarf" | grep -v "git-xargs" | xargs -i asdf plugin add {}
 
 # Install all ASDF versions that are present in the .tool-versions file
 RUN asdf install
