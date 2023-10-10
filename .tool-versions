@@ -7,7 +7,7 @@ checkov 2.5.6
 # renovate: datasource=github-tags depName=dagger/dagger
 dagger 0.8.7
 flux2 2.1.1
-golang 1.21.2
+golang 1.21.3
 golangci-lint 1.54.2
 # renovate: datasource=github-tags depName=anchore/grype
 grype 0.69.1
@@ -21,7 +21,7 @@ kubectl 1.28.2
 pre-commit 3.4.0
 sops 3.8.0
 # renovate: datasource=github-tags depName=anchore/syft
-syft 0.92.0
+syft 0.93.0
 terraform 1.5.7
 terraform-docs 0.16.0
 tflint 0.48.0
