@@ -10,7 +10,7 @@ flux2 2.1.1
 golang 1.21.3
 golangci-lint 1.54.2
 # renovate: datasource=github-tags depName=anchore/grype
-grype 0.69.1
+grype 0.70.0
 hadolint 2.12.0
 helm 3.13.0
 # renovate: datasource=github-releases depName=k3d-io/k3d
