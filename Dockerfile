@@ -1,5 +1,3 @@
-FROM cgr.dev/chainguard/opentf as opentf
-
 FROM rockylinux:9
 # Renovate "style" is used for some versioning. See https://docs.renovatebot.com/modules/manager/regex/#advanced-capture
 
@@ -74,8 +72,10 @@ COPY .tool-versions /root/.tool-versions
 RUN asdf plugin add zarf https://github.com/defenseunicorns/asdf-zarf.git
 # git-xargs needs to be added separately since it doesn't have a "shortform" option in the asdf registry yet
 RUN asdf plugin add git-xargs https://github.com/defenseunicorns/asdf-git-xargs.git
+# opentofu needs to be added separately since it doesn't have a "shortform" option in the asdf registry yet
+RUN asdf plugin add opentofu https://github.com/defenseunicorns/asdf-opentofu.git
 # Install all other ASDF plugins that are present in the .tool-versions file.
-RUN cat /root/.tool-versions | cut -d' ' -f1 | grep "^[^\#]" | grep -v "zarf" | grep -v "git-xargs" | xargs -i asdf plugin add {}
+RUN cat /root/.tool-versions | cut -d' ' -f1 | grep "^[^\#]" | grep -v "zarf" | grep -v "git-xargs" | grep -v "opentofu" | xargs -i asdf plugin add {}
 
 # Install all ASDF versions that are present in the .tool-versions file
 RUN asdf install
@@ -84,10 +84,6 @@ RUN asdf install
 # renovate: datasource=pypi depName=sshuttle
 ENV SSHUTTLE_VERSION=1.1.1
 RUN pip install --force-reinstall -v "sshuttle==${SSHUTTLE_VERSION}"
-
-# Install OpenTF. They haven't released any official versions yet so we're grabing it from chainguard's opentf:latest image
-# TODO: Switch to a released version/binary once they are available
-COPY --from=opentf /usr/bin/opentf /usr/local/bin/opentf
 
 # Support tools installed as root when running as any other user
 ENV ASDF_DATA_DIR="/root/.asdf"

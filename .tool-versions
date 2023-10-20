@@ -18,6 +18,8 @@ k3d 5.6.0
 # renovate: datasource=github-tags depName=derailed/k9s
 k9s 0.27.4
 kubectl 1.28.2
+# renovate: datasource=github-tags depName=opentofu/opentofu
+opentofu 1.6.0-alpha2
 pre-commit 3.4.0
 sops 3.8.1
 # renovate: datasource=github-tags depName=anchore/syft
