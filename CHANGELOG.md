@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.13.2](https://github.com/defenseunicorns/build-harness/compare/1.13.1...1.13.2) (2023-10-20)
+
+
+### Miscellaneous Chores
+
+* **deps:** update all dependencies ([#129](https://github.com/defenseunicorns/build-harness/issues/129)) ([21bf364](https://github.com/defenseunicorns/build-harness/commit/21bf3641468be63af9c8e3ff1b56ff539abcdc69))
+* **deps:** update all dependencies ([#131](https://github.com/defenseunicorns/build-harness/issues/131)) ([3de15ff](https://github.com/defenseunicorns/build-harness/commit/3de15ffdb08c16ed06aced8eb75723bf51351cda))
+* update opentofu renovate versioning to "loose" ([868a065](https://github.com/defenseunicorns/build-harness/commit/868a0656f4e63ed0ac30daa71099980753af4558))
+
 ## [1.13.1](https://github.com/defenseunicorns/build-harness/compare/1.13.0...1.13.1) (2023-10-11)
 
 
