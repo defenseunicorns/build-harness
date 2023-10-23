@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/defenseunicorns/build-harness/compare/1.13.2...1.14.0) (2023-10-23)
+
+
+### Features
+
+* add `yq` ([#135](https://github.com/defenseunicorns/build-harness/issues/135)) ([b381a15](https://github.com/defenseunicorns/build-harness/commit/b381a15a71ff3bd283e25afa92f129cf52298a64))
+
 ## [1.13.2](https://github.com/defenseunicorns/build-harness/compare/1.13.1...1.13.2) (2023-10-20)
 
 
