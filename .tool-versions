@@ -7,6 +7,8 @@ checkov 2.5.15
 # renovate: datasource=github-tags depName=dagger/dagger
 dagger 0.8.8
 flux2 2.1.2
+# renovate: datasource=github-tags depName=gruntwork-io/git-xargs
+git-xargs 0.1.10
 golang 1.21.3
 golangci-lint 1.55.0
 # renovate: datasource=github-tags depName=anchore/grype
@@ -28,7 +30,7 @@ terraform 1.5.7
 terraform-docs 0.16.0
 tflint 0.48.0
 tfsec 1.28.4
+# renovate: datasource=github-tags depName=mikefarah/yq
+yq 4.35.2
 # renovate: datasource=github-releases depName=defenseunicorns/zarf
 zarf 0.30.1
-# renovate: datasource=github-tags depName=gruntwork-io/git-xargs
-git-xargs 0.1.10
