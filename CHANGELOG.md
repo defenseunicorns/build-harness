@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.14.1](https://github.com/defenseunicorns/build-harness/compare/1.14.0...1.14.1) (2023-10-30)
+
+
+### Miscellaneous Chores
+
+* change Renovate config rebaseWhen to "never" ([#137](https://github.com/defenseunicorns/build-harness/issues/137)) ([3626622](https://github.com/defenseunicorns/build-harness/commit/3626622955cdbb90e605e51310675cbac0cfbb5f))
+* **deps:** update all dependencies ([#133](https://github.com/defenseunicorns/build-harness/issues/133)) ([f4926ff](https://github.com/defenseunicorns/build-harness/commit/f4926ff5bce1d6607d0c45e9ef3b4e4e070ad5cd))
+
 ## [1.14.0](https://github.com/defenseunicorns/build-harness/compare/1.13.2...1.14.0) (2023-10-23)
 
 
