@@ -78,7 +78,7 @@ jobs:
           make sbom IMAGE_TO_SCAN=docker-archive:./image.tar
 
       - name: Upload SBOM
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: sbom-${{steps.convert-platform.outputs.value}}
           path: |
@@ -93,7 +93,7 @@ jobs:
           make vuln-report
 
       - name: Upload Vuln Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: vuln-report-${{steps.convert-platform.outputs.value}}
           path: |
