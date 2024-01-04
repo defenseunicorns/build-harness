@@ -55,15 +55,17 @@ jobs:
           no-cache: true
 
       - name: Export digest
+        id: export-digest
         run: |
           mkdir -p /tmp/digests
           digest="${{ steps.build.outputs.digest }}"
           touch "/tmp/digests/${digest#sha256:}"
+          echo "digest=${digest#sha256:}" >> "$GITHUB_OUTPUT"
 
       - name: Upload digest
         uses: actions/upload-artifact@v4
         with:
-          name: digest-${{ steps.build.outputs.digest }}
+          name: digest-${{ steps.export-digest.outputs.digest }}
           path: /tmp/digests/*
           if-no-files-found: error
           retention-days: 1
