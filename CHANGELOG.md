@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.12](https://github.com/defenseunicorns/build-harness/compare/1.14.11...1.14.12) (2024-01-04)
+
+
+### Bug Fixes
+
+* more fixes for tag-push workflow ([#161](https://github.com/defenseunicorns/build-harness/issues/161)) ([5b09c29](https://github.com/defenseunicorns/build-harness/commit/5b09c2996cae475a02f1f0c21dbcb42688373b00))
+
 ## [1.14.11](https://github.com/defenseunicorns/build-harness/compare/1.14.10...1.14.11) (2024-01-04)
 
 
