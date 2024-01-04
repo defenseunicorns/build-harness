@@ -1,5 +1,77 @@
 # Changelog
 
+## [1.14.9](https://github.com/defenseunicorns/build-harness/compare/1.14.8...1.14.9) (2024-01-03)
+
+
+### Miscellaneous Chores
+
+* **deps:** update all dependencies ([#154](https://github.com/defenseunicorns/build-harness/issues/154)) ([1f8875d](https://github.com/defenseunicorns/build-harness/commit/1f8875dc56f32c62393be0b86f86d9e8666fca83))
+
+## [1.14.8](https://github.com/defenseunicorns/build-harness/compare/1.14.7...1.14.8) (2023-12-07)
+
+
+### Miscellaneous Chores
+
+* **deps:** update all dependencies ([#152](https://github.com/defenseunicorns/build-harness/issues/152)) ([81ce0c5](https://github.com/defenseunicorns/build-harness/commit/81ce0c5f902c002b8b0d7ad620fb305530da467c))
+
+## [1.14.7](https://github.com/defenseunicorns/build-harness/compare/1.14.6...1.14.7) (2023-12-05)
+
+
+### Miscellaneous Chores
+
+* **deps:** update all dependencies ([#150](https://github.com/defenseunicorns/build-harness/issues/150)) ([a50448e](https://github.com/defenseunicorns/build-harness/commit/a50448ec814a6df61d95567995fe3a5127564562))
+
+## [1.14.6](https://github.com/defenseunicorns/build-harness/compare/1.14.5...1.14.6) (2023-12-04)
+
+
+### Miscellaneous Chores
+
+* **deps:** update all dependencies ([#148](https://github.com/defenseunicorns/build-harness/issues/148)) ([891771d](https://github.com/defenseunicorns/build-harness/commit/891771d024836b6aa058e8b3198ca672fea9c5cb))
+
+## [1.14.5](https://github.com/defenseunicorns/build-harness/compare/1.14.4...1.14.5) (2023-11-30)
+
+
+### Miscellaneous Chores
+
+* **deps:** update all dependencies ([#145](https://github.com/defenseunicorns/build-harness/issues/145)) ([2ddcb95](https://github.com/defenseunicorns/build-harness/commit/2ddcb95f4a49fc36a2cb55ad35fdc03c22972633))
+
+## [1.14.4](https://github.com/defenseunicorns/build-harness/compare/1.14.3...1.14.4) (2023-11-30)
+
+
+### Miscellaneous Chores
+
+* **deps:** update all dependencies ([#144](https://github.com/defenseunicorns/build-harness/issues/144)) ([8c31787](https://github.com/defenseunicorns/build-harness/commit/8c31787c30bd094c22262d24eea508644d1f17a2))
+
+## [1.14.3](https://github.com/defenseunicorns/build-harness/compare/1.14.2...1.14.3) (2023-11-28)
+
+
+### Miscellaneous Chores
+
+* **deps:** update all dependencies ([#141](https://github.com/defenseunicorns/build-harness/issues/141)) ([faed04b](https://github.com/defenseunicorns/build-harness/commit/faed04b4c63d600a09b76842cc29885705133b30))
+* **deps:** update all dependencies ([#142](https://github.com/defenseunicorns/build-harness/issues/142)) ([a440551](https://github.com/defenseunicorns/build-harness/commit/a4405513d34c7ce64a7fa7c32d5f4d551f061aaa))
+
+## [1.14.2](https://github.com/defenseunicorns/build-harness/compare/1.14.1...1.14.2) (2023-10-31)
+
+
+### Miscellaneous Chores
+
+* **deps:** update all dependencies ([#139](https://github.com/defenseunicorns/build-harness/issues/139)) ([c339352](https://github.com/defenseunicorns/build-harness/commit/c339352bbf7599ac364e0687d4598ecd9dd98640))
+
+## [1.14.1](https://github.com/defenseunicorns/build-harness/compare/1.14.0...1.14.1) (2023-10-30)
+
+
+### Miscellaneous Chores
+
+* change Renovate config rebaseWhen to "never" ([#137](https://github.com/defenseunicorns/build-harness/issues/137)) ([3626622](https://github.com/defenseunicorns/build-harness/commit/3626622955cdbb90e605e51310675cbac0cfbb5f))
+* **deps:** update all dependencies ([#133](https://github.com/defenseunicorns/build-harness/issues/133)) ([f4926ff](https://github.com/defenseunicorns/build-harness/commit/f4926ff5bce1d6607d0c45e9ef3b4e4e070ad5cd))
+
+## [1.14.0](https://github.com/defenseunicorns/build-harness/compare/1.13.2...1.14.0) (2023-10-23)
+
+
+### Features
+
+* add `yq` ([#135](https://github.com/defenseunicorns/build-harness/issues/135)) ([b381a15](https://github.com/defenseunicorns/build-harness/commit/b381a15a71ff3bd283e25afa92f129cf52298a64))
+
 ## [1.13.2](https://github.com/defenseunicorns/build-harness/compare/1.13.1...1.13.2) (2023-10-20)
 
 
