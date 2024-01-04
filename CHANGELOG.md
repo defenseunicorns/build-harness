@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.10](https://github.com/defenseunicorns/build-harness/compare/1.14.9...1.14.10) (2024-01-04)
+
+
+### Bug Fixes
+
+* fix failure "Conflict: an artifact with this name already exists on the workflow run" ([#157](https://github.com/defenseunicorns/build-harness/issues/157)) ([eef70af](https://github.com/defenseunicorns/build-harness/commit/eef70af2ed24f0950ed9f6dfa4a0aeaddad95e8b))
+
 ## [1.14.9](https://github.com/defenseunicorns/build-harness/compare/1.14.8...1.14.9) (2024-01-03)
 
 
