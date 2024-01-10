@@ -51,18 +51,18 @@ RUN ARCH_STRING=$(uname -m) \
 # It is our belief that this is safe to do on GitHub Actions hosted runners, since it is GitHub's own infrastructure that would be at risk if they didn't mitigate what would otherwise be an incredibly easy to exploit security hole.
 # This is NOT regarded as safe to do on self-hosted runners without having taken some other mitigation step first.
 RUN dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo \
-    && dnf install -y docker-ce docker-ce-cli containerd.io \
-    && dnf clean all \
-    && rm -rf /var/cache/yum/
+      && dnf install -y docker-ce docker-ce-cli containerd.io \
+      && dnf clean all \
+      && rm -rf /var/cache/yum/
 
 # Install asdf. Get versions from https://github.com/asdf-vm/asdf/releases
 # hadolint ignore=SC2016
 # renovate: datasource=github-tags depName=asdf-vm/asdf
 ENV ASDF_VERSION=0.13.1
 RUN git clone https://github.com/asdf-vm/asdf.git --branch v${ASDF_VERSION} --depth 1 "${HOME}/.asdf" \
-  && echo -e '\nsource $HOME/.asdf/asdf.sh' >> "${HOME}/.bashrc" \
-  && echo -e '\nsource $HOME/.asdf/asdf.sh' >> "${HOME}/.profile" \
-  && source "${HOME}/.asdf/asdf.sh"
+      && echo -e '\nsource $HOME/.asdf/asdf.sh' >> "${HOME}/.bashrc" \
+      && echo -e '\nsource $HOME/.asdf/asdf.sh' >> "${HOME}/.profile" \
+      && source "${HOME}/.asdf/asdf.sh"
 ENV PATH="/root/.asdf/shims:/root/.asdf/bin:${PATH}"
 
 # Copy our .tool-versions file into the container
@@ -74,8 +74,17 @@ RUN asdf plugin add zarf https://github.com/defenseunicorns/asdf-zarf.git
 RUN asdf plugin add git-xargs https://github.com/defenseunicorns/asdf-git-xargs.git
 # opentofu needs to be added separately since it doesn't have a "shortform" option in the asdf registry yet
 RUN asdf plugin add opentofu https://github.com/defenseunicorns/asdf-opentofu.git
+# uds-cli (uds) needs to be added separately since it doesn't have a "shortform" option in the asdf registry yet
+RUN asdf plugin add uds-cli https://github.com/defenseunicorns/asdf-uds-cli.git
+
 # Install all other ASDF plugins that are present in the .tool-versions file.
-RUN cat /root/.tool-versions | cut -d' ' -f1 | grep "^[^\#]" | grep -v "zarf" | grep -v "git-xargs" | grep -v "opentofu" | xargs -i asdf plugin add {}
+RUN cat /root/.tool-versions | \
+      grep "^[^\#]" | \
+      grep -v "zarf" | \
+      grep -v "git-xargs" | \
+      grep -v "opentofu" | \
+      grep -v "uds-cli" | \
+      xargs -i asdf plugin add {}
 
 # Install all ASDF versions that are present in the .tool-versions file
 RUN asdf install
