@@ -79,13 +79,13 @@ RUN asdf plugin add uds-cli https://github.com/defenseunicorns/asdf-uds-cli.git
 
 # Install all other ASDF plugins that are present in the .tool-versions file.
 RUN cat /root/.tool-versions | \
-      grep "^[^\#]" | \
-      grep -v "zarf" | \
-      grep -v "git-xargs" | \
-      grep -v "opentofu" | \
-      grep -v "uds-cli" | \
-      xargs -i asdf plugin add {}
-
+  cut -d' ' -f1 | \
+  grep "^[^\#]" | \
+  grep -v "zarf" | \
+  grep -v "git-xargs" | \
+  grep -v "opentofu" | \
+  grep -v "uds-cli" | \
+  xargs -i asdf plugin add {}
 # Install all ASDF versions that are present in the .tool-versions file
 RUN asdf install
 
