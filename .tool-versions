@@ -31,7 +31,7 @@ terraform-docs 0.17.0
 tflint 0.50.1
 tfsec 1.28.4
 # renovate: datasource=github-releases depName=defenseunicorns/uds-cli
-uds-cli 0.5.2
+uds-cli 0.5.3
 # renovate: datasource=github-tags depName=mikefarah/yq
 yq 4.40.5
 # renovate: datasource=github-releases depName=defenseunicorns/zarf
