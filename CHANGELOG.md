@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.15.0](https://github.com/defenseunicorns/build-harness/compare/1.14.12...1.15.0) (2024-01-11)
+
+
+### Features
+
+* add uds cli ([#164](https://github.com/defenseunicorns/build-harness/issues/164)) ([75e59b9](https://github.com/defenseunicorns/build-harness/commit/75e59b90666e1096c3378c2c32c9c4beae8f65d1))
+
+
+### Miscellaneous Chores
+
+* **deps:** update all dependencies ([#156](https://github.com/defenseunicorns/build-harness/issues/156)) ([783ff32](https://github.com/defenseunicorns/build-harness/commit/783ff328c6de75f08b5fae1bb11a25065e87aee6))
+* **deps:** update dependency defenseunicorns/uds-cli to v0.5.3 ([#166](https://github.com/defenseunicorns/build-harness/issues/166)) ([942f161](https://github.com/defenseunicorns/build-harness/commit/942f1610112d0683338822f7c467404d8415a3b2))
+
 ## [1.14.12](https://github.com/defenseunicorns/build-harness/compare/1.14.11...1.14.12) (2024-01-04)
 
 
