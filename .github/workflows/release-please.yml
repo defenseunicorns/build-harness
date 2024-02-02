@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Get token
         id: get_installation_token
-        uses: peter-murray/workflow-application-token-action@v2
+        uses: peter-murray/workflow-application-token-action@v3
         with:
           application_id: ${{ secrets.NARWHAL_BOT_APP_ID }}
           application_private_key: ${{ secrets.NARWHAL_BOT_SECRET }}
