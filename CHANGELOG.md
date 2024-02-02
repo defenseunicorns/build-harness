@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.1](https://github.com/defenseunicorns/build-harness/compare/1.15.0...1.15.1) (2024-02-02)
+
+
+### Miscellaneous Chores
+
+* **deps:** update all dependencies ([#167](https://github.com/defenseunicorns/build-harness/issues/167)) ([2d096b8](https://github.com/defenseunicorns/build-harness/commit/2d096b8133aa56de6bfcc17353e1d5f38dca3902))
+
 ## [1.15.0](https://github.com/defenseunicorns/build-harness/compare/1.14.12...1.15.0) (2024-01-11)
 
 
