@@ -44,25 +44,25 @@ defaults:
 
 jobs:
 
-#  skip-tests-if-pull-request-event:
-#    if: github.event_name == 'pull_request'
-#    runs-on: ubuntu-latest
-#    strategy:
-#      fail-fast: false
-#      matrix:
-#        platform:
-#          - linux/amd64
-#          - linux/arm64/v8
-#    steps:
-#      - name: skip-tests-if-pull-request-event
-#        # noinspection YAMLSchemaValidation
-#        uses: defenseunicorns/delivery-github-actions-workflows/.github/actions/report-status-context@main
-#        with:
-#          application_id: ${{ secrets.NARWHAL_BOT_APP_ID }}
-#          application_private_key: ${{ secrets.NARWHAL_BOT_SECRET }}
-#          status-check: test / build
-#          status: success
-#          description: "Tests skipped because this is a pull_request event"
+  skip-tests-if-pull-request-event:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        platform:
+          - linux/amd64
+          - linux/arm64/v8
+    steps:
+      - name: skip-tests-if-pull-request-event
+        # noinspection YAMLSchemaValidation
+        uses: defenseunicorns/delivery-github-actions-workflows/.github/actions/report-status-context@main
+        with:
+          application_id: ${{ secrets.NARWHAL_BOT_APP_ID }}
+          application_private_key: ${{ secrets.NARWHAL_BOT_SECRET }}
+          status-check: trigger-tests / test-all
+          status: success
+          description: "Tests skipped because this is a pull_request event"
 
 #  test-exemption:
 #    if: github.event_name == 'merge_group'
@@ -114,35 +114,35 @@ jobs:
 #        with:
 #          application_id: ${{ secrets.NARWHAL_BOT_APP_ID }}
 #          application_private_key: ${{ secrets.NARWHAL_BOT_SECRET }}
-#          status-check: test / build
+#          status-check: trigger-tests / test-all
 #          status: success
 #          description: "Tests skipped because this is a merge_group event and the PR meets the criteria for granting an exemption"
 
-  test-all:
-#    needs: test-exemption
-#    if: github.event_name == 'merge_group' && needs.test-exemption.outputs.not-exempt == 'true'
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        platform:
-          - linux/amd64
-          - linux/arm64/v8
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ github.event.client_payload.pull_request.head.repo.full_name || github.event.pull_request.head.repo.full_name || github.repository }}
-          ref: ${{ github.event.client_payload.pull_request.head.ref || github.event.pull_request.head.ref || github.ref_name }}
-      - name: Run Tests
-        uses: ./.github/actions/test
-        with:
-          application_id: ${{ secrets.NARWHAL_BOT_APP_ID }}
-          application_private_key: ${{ secrets.NARWHAL_BOT_SECRET }}
-          platform: ${{ matrix.platform }}
-          github-context: test / build
-          registry: ${{ env.REGISTRY }}
-          image-name: ${{ env.IMAGE_NAME }}
+#  test-all:
+##    needs: test-exemption
+##    if: github.event_name == 'merge_group' && needs.test-exemption.outputs.not-exempt == 'true'
+#    runs-on: ubuntu-latest
+#    strategy:
+#      fail-fast: false
+#      matrix:
+#        platform:
+#          - linux/amd64
+#          - linux/arm64/v8
+#    steps:
+#      - name: Checkout Repo
+#        uses: actions/checkout@v4
+#        with:
+#          repository: ${{ github.event.client_payload.pull_request.head.repo.full_name || github.event.pull_request.head.repo.full_name || github.repository }}
+#          ref: ${{ github.event.client_payload.pull_request.head.ref || github.event.pull_request.head.ref || github.ref_name }}
+#      - name: Run Tests
+#        uses: ./.github/actions/test
+#        with:
+#          application_id: ${{ secrets.NARWHAL_BOT_APP_ID }}
+#          application_private_key: ${{ secrets.NARWHAL_BOT_SECRET }}
+#          platform: ${{ matrix.platform }}
+#          github-context: trigger-tests / test-all
+#          registry: ${{ env.REGISTRY }}
+#          image-name: ${{ env.IMAGE_NAME }}
 
 #  slash-command-dispatch-test:
 #    if: github.event_name == 'issue_comment' && github.event.issue.pull_request && contains(github.event.comment.body, '/test')
