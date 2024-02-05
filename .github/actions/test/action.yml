@@ -25,26 +25,15 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Get token
-      id: get_installation_token
-      uses: peter-murray/workflow-application-token-action@v2
+
+    - name: Update GitHub Status for pending
+      uses: defenseunicorns/delivery-github-actions-workflows/.github/actions/report-status-context@main
       with:
         application_id: ${{ inputs.application_id }}
         application_private_key: ${{ inputs.application_private_key }}
-
-    # Update GitHub status for pending pipeline run
-    - name: "Update GitHub Status for pending"
-      uses: docker://cloudposse/github-status-updater
-      with:
-        args: "-action update_state -state pending -ref ${{ env.REPO_SHA }} -repo ${{ env.REPO_NAME }} -token ${{ steps.get_installation_token.outputs.token }}"
-      env:
-        REPO_SHA: ${{ github.event.client_payload.pull_request.head.sha || github.sha }}
-        REPO_NAME: ${{ github.event.client_payload.github.payload.repository.name || github.event.repository.name }}
-        GITHUB_CONTEXT: ${{ inputs.github-context }}
-        GITHUB_DESCRIPTION: "started by @${{ github.event.client_payload.github.actor || github.actor }}"
-        GITHUB_TARGET_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        GITHUB_REF: ${{ github.event.client_payload.pull_request.head.ref || github.ref_name }}
-        GITHUB_OWNER: ${{ github.event.client_payload.github.payload.repository.owner.login || github.repository_owner }}
+        status-check: test-all (${{ matrix.platform }})
+        status: pending
+        description: "started by @${{ github.event.client_payload.github.actor || github.actor }}"
 
     - name: Convert platform to valid artifact name
       id: convert-platform
@@ -112,57 +101,32 @@ runs:
           vulns.grype.txt
         if-no-files-found: error
 
-    # this is because the GitHub installation token expires after an hour, non-configurable, sometimes the tests take longer than an hour
-    # https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-an-installation-access-token-for-a-github-app
-    - name: "Get token again"
-      if: ${{ always() }}
-      id: get_installation_token_again
-      uses: peter-murray/workflow-application-token-action@v2
+    - name: Update GitHub Status for success
+      if: ${{ success() }}
+      uses: defenseunicorns/delivery-github-actions-workflows/.github/actions/report-status-context@main
       with:
         application_id: ${{ inputs.application_id }}
         application_private_key: ${{ inputs.application_private_key }}
+        status-check: test-all (${{ matrix.platform }})
+        status: success
+        description: run passed
 
-    # Update GitHub status for successful pipeline run
-    - name: "Update GitHub Status for success"
-      if: ${{ success() }}
-      uses: docker://cloudposse/github-status-updater
-      with:
-        args: "-action update_state -state success -ref ${{ env.REPO_SHA }} -repo ${{ env.REPO_NAME }} -token ${{ steps.get_installation_token_again.outputs.token }}"
-      env:
-        REPO_SHA: ${{ github.event.client_payload.pull_request.head.sha || github.sha }}
-        REPO_NAME: ${{ github.event.client_payload.github.payload.repository.name || github.event.repository.name }}
-        GITHUB_CONTEXT: ${{ inputs.github-context }}
-        GITHUB_DESCRIPTION: "run passed"
-        GITHUB_TARGET_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        GITHUB_REF: ${{ github.event.client_payload.pull_request.head.ref || github.ref_name }}
-        GITHUB_OWNER: ${{ github.event.client_payload.github.payload.repository.owner.login || github.repository_owner }}
-
-    # Update GitHub status for failing pipeline run
-    - name: "Update GitHub Status for failure"
+    - name: Update GitHub Status for failure
       if: ${{ failure() }}
-      uses: docker://cloudposse/github-status-updater
+      uses: defenseunicorns/delivery-github-actions-workflows/.github/actions/report-status-context@main
       with:
-        args: "-action update_state -state failure -ref ${{ env.REPO_SHA }} -repo ${{ env.REPO_NAME }} -token ${{ steps.get_installation_token_again.outputs.token }}"
-      env:
-        REPO_SHA: ${{ github.event.client_payload.pull_request.head.sha || github.sha }}
-        REPO_NAME: ${{ github.event.client_payload.github.payload.repository.name || github.event.repository.name }}
-        GITHUB_CONTEXT: ${{ inputs.github-context }}
-        GITHUB_DESCRIPTION: "run failed"
-        GITHUB_TARGET_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        GITHUB_REF: ${{ github.event.client_payload.pull_request.head.ref || github.ref_name }}
-        GITHUB_OWNER: ${{ github.event.client_payload.github.payload.repository.owner.login || github.repository_owner }}
+        application_id: ${{ inputs.application_id }}
+        application_private_key: ${{ inputs.application_private_key }}
+        status-check: test-all (${{ matrix.platform }})
+        status: failure
+        description: run failed
 
-    # Update GitHub status for cancelled pipeline run
-    - name: "Update GitHub Status for cancelled"
+    - name: Update GitHub Status for cancelled
       if: ${{ cancelled() }}
-      uses: docker://cloudposse/github-status-updater
+      uses: defenseunicorns/delivery-github-actions-workflows/.github/actions/report-status-context@main
       with:
-        args: "-action update_state -state error -ref ${{ env.REPO_SHA }} -repo ${{ env.REPO_NAME }} -token ${{ steps.get_installation_token_again.outputs.token }}"
-      env:
-        REPO_SHA: ${{ github.event.client_payload.pull_request.head.sha || github.sha }}
-        REPO_NAME: ${{ github.event.client_payload.github.payload.repository.name || github.event.repository.name }}
-        GITHUB_CONTEXT: ${{ inputs.github-context }}
-        GITHUB_DESCRIPTION: "run cancelled"
-        GITHUB_TARGET_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        GITHUB_REF: ${{ github.event.client_payload.pull_request.head.ref || github.ref_name }}
-        GITHUB_OWNER: ${{ github.event.client_payload.github.payload.repository.owner.login || github.repository_owner }}
+        application_id: ${{ inputs.application_id }}
+        application_private_key: ${{ inputs.application_private_key }}
+        status-check: test-all (${{ matrix.platform }})
+        status: error
+        description: run failed
