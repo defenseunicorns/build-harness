@@ -2,7 +2,7 @@
 
 ## Commit Messages
 
-Because we use the [release-please](https://github.com/googleapis/release-please) bot, commit messages to main must follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification. This is enforced by the [commitlint](https://commitlint.js.org/#/) tool. This requirement is only enforced on the `main` branch. Commit messages in PRs can be whatever you want them to be. "Squash" mode must be used when merging a PR, with a commit message that follows the Conventional Commits specification.
+Because we use the [release-please](https://github.com/googleapis/release-please) bot, commit messages to main must follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification. This is soon to be (but not yet) enforced by the [commitlint](https://commitlint.js.org/#/) tool. This requirement is only enforced on the `main` branch. Commit messages in PRs can be whatever you want them to be. "Squash" mode must be used when merging a PR, with a commit message that follows the Conventional Commits specification.
 
 ## Release Process
 
