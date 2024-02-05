@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.15.3](https://github.com/defenseunicorns/build-harness/compare/1.15.2...1.15.3) (2024-02-05)
+
+
+### Miscellaneous Chores
+
+* **ci:** Allow Renovate to automerge ([#175](https://github.com/defenseunicorns/build-harness/issues/175)) ([b26546b](https://github.com/defenseunicorns/build-harness/commit/b26546bb8b74f2dfc9a8d2236a59d24d680ce7c0))
+* **ci:** Stop testing twice ([#172](https://github.com/defenseunicorns/build-harness/issues/172)) ([c34e67b](https://github.com/defenseunicorns/build-harness/commit/c34e67b77fd9d179e2a6d07a81c0bc62a6eff72b))
+* **deps:** update stable ([#176](https://github.com/defenseunicorns/build-harness/issues/176)) ([193e0ea](https://github.com/defenseunicorns/build-harness/commit/193e0eaff908fc2cf871e420a0c92da0701c5ad0))
+* **deps:** update stable ([#177](https://github.com/defenseunicorns/build-harness/issues/177)) ([4ec33d3](https://github.com/defenseunicorns/build-harness/commit/4ec33d3b21d4ae024b2a02d151c2c8ebeb50d74b))
+* **docs:** update CONTRIBUTING.md ([#174](https://github.com/defenseunicorns/build-harness/issues/174)) ([e1cba7a](https://github.com/defenseunicorns/build-harness/commit/e1cba7a1e017eef920676f213db97f9bdfa6c6d8))
+
 ## [1.15.2](https://github.com/defenseunicorns/build-harness/compare/1.15.1...1.15.2) (2024-02-05)
 
 
