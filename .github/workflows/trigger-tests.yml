@@ -83,7 +83,7 @@ jobs:
           fetch-depth: 0
       - name: changed-files
         id: changed-files
-        uses: tj-actions/changed-files@v41
+        uses: tj-actions/changed-files@v42
         with:
           base_sha: ${{ github.event.merge_group.base_sha }}
           sha: ${{ github.event.merge_group.head_sha }}
@@ -149,12 +149,12 @@ jobs:
     steps:
       - name: Get token
         id: get_workflow_token
-        uses: peter-murray/workflow-application-token-action@v2
+        uses: peter-murray/workflow-application-token-action@v3
         with:
           application_id: ${{ secrets.NARWHAL_BOT_APP_ID }}
           application_private_key: ${{ secrets.NARWHAL_BOT_SECRET }}
       - name: Slash Command Dispatch
-        uses: peter-evans/slash-command-dispatch@v3
+        uses: peter-evans/slash-command-dispatch@v4
         with:
           token: ${{ steps.get_workflow_token.outputs.token }}
           reaction-token: ${{ steps.get_workflow_token.outputs.token }}
