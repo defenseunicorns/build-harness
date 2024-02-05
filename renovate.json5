@@ -7,9 +7,6 @@
     ":semanticPrefixFixDepsChoreOthers",
     // Ignore node_modules, bower_components, vendor and various test/tests directories. See https://docs.renovatebot.com/presets-default/#ignoremodulesandtests
     ":ignoreModulesAndTests",
-    // Group all updates together. See https://docs.renovatebot.com/presets-group/#groupall
-    // Other less drastic groupings that may be of interest include: group:allNonMajor, group:recommended, group:monorepos
-    "group:all",
     // Apply crowd-sourced package replacement rules. See https://docs.renovatebot.com/presets-replacements/#replacementsall
     "replacements:all",
     // Apply crowd-sourced workarounds for known problems with packages. See https://docs.renovatebot.com/presets-workarounds/#workaroundsall
@@ -70,6 +67,11 @@
     {
       matchPackageNames: ["terraform"],
       allowedVersions: "<1.6.0"
+    },
+    {
+      excludePackageNames: [],
+      groupName: "stable",
+      automerge: true
     }
   ]
 }
