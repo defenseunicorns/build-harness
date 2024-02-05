@@ -1,0 +1,132 @@
+name: Run Tests
+
+description: Run Tests
+
+inputs:
+  application_id:
+    description: 'The GitHub App ID'
+    required: true
+  application_private_key:
+    description: 'The GitHub App private key'
+    required: true
+  platform:
+    description: 'The platform to run the tests on'
+    required: true
+  github-context:
+    description: The GitHub Status Context to use when updating the status
+    required: true
+  registry:
+    description: The registry to push the image to
+    required: true
+  image-name:
+    description: The name of the image to push
+    required: true
+
+runs:
+  using: composite
+  steps:
+
+    - name: Update GitHub Status for pending
+      uses: defenseunicorns/delivery-github-actions-workflows/.github/actions/report-status-context@main
+      with:
+        application_id: ${{ inputs.application_id }}
+        application_private_key: ${{ inputs.application_private_key }}
+        status-check: test-all (${{ matrix.platform }})
+        status: pending
+        description: "started by @${{ github.event.client_payload.github.actor || github.actor }}"
+
+    - name: Convert platform to valid artifact name
+      id: convert-platform
+      uses: mad9000/actions-find-and-replace-string@4
+      with:
+        source: ${{ inputs.platform }}
+        find: '/'
+        replace: '-'
+        replaceAll: "true"
+
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Extract metadata (tags, labels) for Docker
+      id: meta
+      uses: docker/metadata-action@v5
+      with:
+        images: ${{ inputs.registry }}/${{ inputs.image-name }}
+        tags: |
+          type=raw,value=${{ github.ref_name }}
+
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Build image to tarball
+      id: build
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        platforms: ${{ inputs.platform }}
+        labels: ${{ steps.meta.outputs.labels }}
+        outputs: type=docker,dest=./image.tar
+        no-cache: true
+
+    - name: Build SBOM
+      shell: bash -e -o pipefail {0}
+      run: |
+        make sbom IMAGE_TO_SCAN=docker-archive:./image.tar
+
+    - name: Upload SBOM
+      uses: actions/upload-artifact@v4
+      with:
+        name: sbom-${{steps.convert-platform.outputs.value}}
+        path: |
+          sbom.cyclonedx.json
+          sbom.spdx.json
+          sbom.syft.json
+          sbom.table.txt
+        if-no-files-found: error
+
+    - name: Build Vuln Report
+      shell: bash -e -o pipefail {0}
+      run: |
+        make vuln-report
+
+    - name: Upload Vuln Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: vuln-report-${{steps.convert-platform.outputs.value}}
+        path: |
+          vulns.grype.json
+          vulns.grype.txt
+        if-no-files-found: error
+
+    - name: Update GitHub Status for success
+      if: ${{ success() }}
+      uses: defenseunicorns/delivery-github-actions-workflows/.github/actions/report-status-context@main
+      with:
+        application_id: ${{ inputs.application_id }}
+        application_private_key: ${{ inputs.application_private_key }}
+        status-check: test-all (${{ matrix.platform }})
+        status: success
+        description: run passed
+
+    - name: Update GitHub Status for failure
+      if: ${{ failure() }}
+      uses: defenseunicorns/delivery-github-actions-workflows/.github/actions/report-status-context@main
+      with:
+        application_id: ${{ inputs.application_id }}
+        application_private_key: ${{ inputs.application_private_key }}
+        status-check: test-all (${{ matrix.platform }})
+        status: failure
+        description: run failed
+
+    - name: Update GitHub Status for cancelled
+      if: ${{ cancelled() }}
+      uses: defenseunicorns/delivery-github-actions-workflows/.github/actions/report-status-context@main
+      with:
+        application_id: ${{ inputs.application_id }}
+        application_private_key: ${{ inputs.application_private_key }}
+        status-check: test-all (${{ matrix.platform }})
+        status: error
+        description: run failed
