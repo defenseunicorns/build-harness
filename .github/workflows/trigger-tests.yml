@@ -60,7 +60,7 @@ jobs:
         with:
           application_id: ${{ secrets.NARWHAL_BOT_APP_ID }}
           application_private_key: ${{ secrets.NARWHAL_BOT_SECRET }}
-          status-check: trigger-tests / test-all
+          status-check: trigger-tests / test-all (${{ matrix.platform }})
           status: success
           description: "Tests skipped because this is a pull_request event"
 
@@ -114,7 +114,7 @@ jobs:
 #        with:
 #          application_id: ${{ secrets.NARWHAL_BOT_APP_ID }}
 #          application_private_key: ${{ secrets.NARWHAL_BOT_SECRET }}
-#          status-check: trigger-tests / test-all
+#          status-check: trigger-tests / test-all (${{ matrix.platform }})
 #          status: success
 #          description: "Tests skipped because this is a merge_group event and the PR meets the criteria for granting an exemption"
 
@@ -140,7 +140,7 @@ jobs:
 #          application_id: ${{ secrets.NARWHAL_BOT_APP_ID }}
 #          application_private_key: ${{ secrets.NARWHAL_BOT_SECRET }}
 #          platform: ${{ matrix.platform }}
-#          github-context: trigger-tests / test-all
+#          github-context: trigger-tests / test-all (${{ matrix.platform }})
 #          registry: ${{ env.REGISTRY }}
 #          image-name: ${{ env.IMAGE_NAME }}
 
