@@ -15,7 +15,7 @@ runs:
   steps:
     - name: Get token
       id: get_installation_token
-      uses: peter-murray/workflow-application-token-action@v2
+      uses: peter-murray/workflow-application-token-action@v3
       with:
         application_id: ${{ inputs.application_id }}
         application_private_key: ${{ inputs.application_private_key }}
@@ -28,7 +28,7 @@ runs:
     # Will update the comment that triggered the /test comment and add the run-url
     - name: Update comment
       if: github.event_name == 'repository_dispatch'
-      uses: peter-evans/create-or-update-comment@v3
+      uses: peter-evans/create-or-update-comment@v4
       with:
         token: ${{ inputs.token || steps.get_installation_token.outputs.token }}
         repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
