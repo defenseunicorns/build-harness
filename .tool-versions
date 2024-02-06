@@ -9,7 +9,7 @@ dagger 0.9.8
 flux2 2.2.3
 # renovate: datasource=github-tags depName=gruntwork-io/git-xargs
 git-xargs 0.1.10
-golang 1.21.6
+golang 1.21.7
 golangci-lint 1.55.2
 # renovate: datasource=github-tags depName=anchore/grype
 grype 0.74.4
