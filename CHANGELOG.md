@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.0.0](https://github.com/defenseunicorns/build-harness/compare/1.15.6...2.0.0) (2024-02-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* No longer building the arm64 image
+
+### Miscellaneous Chores
+
+* **deps:** update dependency awscli to v2.15.18 ([#186](https://github.com/defenseunicorns/build-harness/issues/186)) ([ee801c6](https://github.com/defenseunicorns/build-harness/commit/ee801c64c202e2a7872576934def119b0c3d5fa9))
+* **deps:** update dependency defenseunicorns/build-harness to v1.15.6 ([#184](https://github.com/defenseunicorns/build-harness/issues/184)) ([25b504e](https://github.com/defenseunicorns/build-harness/commit/25b504e6d948ee68ef51b3cf9044d6e97e5b09b4))
+
+
+### Build System
+
+* Stop building arm64 ([#188](https://github.com/defenseunicorns/build-harness/issues/188)) ([c22d01e](https://github.com/defenseunicorns/build-harness/commit/c22d01e99151e3933a881901e0ababc2b55b29d7))
+
 ## [1.15.6](https://github.com/defenseunicorns/build-harness/compare/1.15.5...1.15.6) (2024-02-07)
 
 
