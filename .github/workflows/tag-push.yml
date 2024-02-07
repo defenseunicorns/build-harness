@@ -18,7 +18,8 @@ jobs:
       matrix:
         platform:
           - linux/amd64
-          - linux/arm64/v8
+          # We used to build for arm64, and we can again in the future by simply uncommenting this line in each of the "matrix" blocks
+#          - linux/arm64/v8
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,8 +32,9 @@ jobs:
           tags: |
             type=raw,value=${{ github.ref_name }}
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+      # QEMU is only required for cross-platform builds
+#      - name: Set up QEMU
+#        uses: docker/setup-qemu-action@v3
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
