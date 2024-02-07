@@ -3,14 +3,14 @@ adr-tools 3.0.0
 aws-nuke 2.25.0
 awscli 2.15.17
 # renovate: datasource=git-tags depName=https://github.com/bridgecrewio/checkov.git
-checkov 3.2.12
+checkov 3.2.17
 # renovate: datasource=github-tags depName=dagger/dagger
 dagger 0.9.8
 flux2 2.2.3
 # renovate: datasource=github-tags depName=gruntwork-io/git-xargs
 git-xargs 0.1.10
-golang 1.21.7
-golangci-lint 1.55.2
+golang 1.22.0
+golangci-lint 1.56.0
 # renovate: datasource=github-tags depName=anchore/grype
 grype 0.74.4
 hadolint 2.12.0
@@ -18,7 +18,7 @@ helm 3.14.0
 # renovate: datasource=github-releases depName=k3d-io/k3d
 k3d 5.6.0
 # renovate: datasource=github-tags depName=derailed/k9s
-k9s 0.31.7
+k9s 0.31.8
 kubectl 1.29.1
 # renovate: datasource=github-tags depName=opentofu/opentofu versioning=loose
 opentofu 1.6.1
@@ -31,7 +31,7 @@ terraform-docs 0.17.0
 tflint 0.50.3
 tfsec 1.28.5
 # renovate: datasource=github-releases depName=defenseunicorns/uds-cli
-uds-cli 0.8.0
+uds-cli 0.8.1
 # renovate: datasource=github-tags depName=mikefarah/yq
 yq 4.40.5
 # renovate: datasource=github-releases depName=defenseunicorns/zarf
