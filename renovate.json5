@@ -69,7 +69,12 @@
       allowedVersions: "<1.6.0"
     },
     {
-      excludePackageNames: [],
+      matchPackageNames: ["anchore/syft"],
+      groupName: "syft",
+      automerge: true
+    },
+    {
+      excludePackageNames: ["anchore/syft"],
       groupName: "stable",
       automerge: true
     }
