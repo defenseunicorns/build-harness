@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.1](https://github.com/defenseunicorns/build-harness/compare/2.0.0...2.0.1) (2024-02-12)
+
+
+### Miscellaneous Chores
+
+* **ci:** extract Syft into its own PR due to pipeline failure with new version ([#189](https://github.com/defenseunicorns/build-harness/issues/189)) ([88892cb](https://github.com/defenseunicorns/build-harness/commit/88892cb3de5cea45ade60954e6aa3840edb496ea))
+* **deps:** update dependency anchore/syft to v0.104.0 ([#191](https://github.com/defenseunicorns/build-harness/issues/191)) ([4e40cc3](https://github.com/defenseunicorns/build-harness/commit/4e40cc39dd942c5e0e8107315e2bffdbd4a305aa))
+* **deps:** update dependency defenseunicorns/build-harness to v2 ([#192](https://github.com/defenseunicorns/build-harness/issues/192)) ([fe297a2](https://github.com/defenseunicorns/build-harness/commit/fe297a222f16458c0092f719ab342b40fb713ea0))
+* **deps:** update stable ([#187](https://github.com/defenseunicorns/build-harness/issues/187)) ([01dadeb](https://github.com/defenseunicorns/build-harness/commit/01dadebc21c493673259fd0a8c76b79ce51c9499))
+
 ## [2.0.0](https://github.com/defenseunicorns/build-harness/compare/1.15.6...2.0.0) (2024-02-07)
 
 
