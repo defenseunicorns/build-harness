@@ -68,13 +68,13 @@
       matchPackageNames: ["terraform"],
       allowedVersions: "<1.6.0"
     },
+//    {
+//      matchPackageNames: ["anchore/syft"],
+//      groupName: "syft",
+//      automerge: true
+//    },
     {
-      matchPackageNames: ["anchore/syft"],
-      groupName: "syft",
-      automerge: true
-    },
-    {
-      excludePackageNames: ["anchore/syft"],
+      excludePackageNames: [],
       groupName: "stable",
       automerge: true
     }
