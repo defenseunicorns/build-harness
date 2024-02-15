@@ -12,9 +12,9 @@ git-xargs 0.1.10
 golang 1.22.0
 golangci-lint 1.56.1
 # renovate: datasource=github-tags depName=anchore/grype
-grype 0.74.5
+grype 0.74.6
 hadolint 2.12.0
-helm 3.14.0
+helm 3.14.1
 # renovate: datasource=github-releases depName=k3d-io/k3d
 k3d 5.6.0
 # renovate: datasource=github-tags depName=derailed/k9s
@@ -25,7 +25,7 @@ opentofu 1.6.1
 pre-commit 3.6.1
 sops 3.8.1
 # renovate: datasource=github-tags depName=anchore/syft
-syft 0.104.0
+syft 0.105.0
 terraform 1.5.7
 terraform-docs 0.17.0
 tflint 0.50.3
