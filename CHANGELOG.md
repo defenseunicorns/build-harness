@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.3](https://github.com/defenseunicorns/build-harness/compare/2.0.2...2.0.3) (2024-02-15)
+
+
+### Miscellaneous Chores
+
+* **ci:** Merge renovate PRs and change Build Harness dep Renovate trigger to Docker ([#196](https://github.com/defenseunicorns/build-harness/issues/196)) ([513c616](https://github.com/defenseunicorns/build-harness/commit/513c6167453943970b6ee4105bb0b27816ffcfa8))
+* **deps:** update dependency defenseunicorns/build-harness to v2.0.2 ([#195](https://github.com/defenseunicorns/build-harness/issues/195)) ([9e98742](https://github.com/defenseunicorns/build-harness/commit/9e98742794a8955c102615edcf9a02b9658fd102))
+* **deps:** update dependency https://github.com/bridgecrewio/checkov.git to v3.2.21 ([#197](https://github.com/defenseunicorns/build-harness/issues/197)) ([1d97a31](https://github.com/defenseunicorns/build-harness/commit/1d97a313d2e6511a11d2599847d72ebcfb29b5ab))
+* **deps:** update stable ([#199](https://github.com/defenseunicorns/build-harness/issues/199)) ([72957ca](https://github.com/defenseunicorns/build-harness/commit/72957ca56eaea4512e85a71945aa00acdc1a58b5))
+* **deps:** update stable ([#200](https://github.com/defenseunicorns/build-harness/issues/200)) ([7ee7d72](https://github.com/defenseunicorns/build-harness/commit/7ee7d72b2e7c441d05b3664d040b4e461692acd3))
+
 ## [2.0.2](https://github.com/defenseunicorns/build-harness/compare/2.0.1...2.0.2) (2024-02-13)
 
 
