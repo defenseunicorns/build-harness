@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.4](https://github.com/defenseunicorns/build-harness/compare/2.0.3...2.0.4) (2024-02-26)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency awscli to v2.15.21 ([#204](https://github.com/defenseunicorns/build-harness/issues/204)) ([76adebe](https://github.com/defenseunicorns/build-harness/commit/76adebe922ab7872700644cd410f07c99d41fcf8))
+* **deps:** update stable ([#201](https://github.com/defenseunicorns/build-harness/issues/201)) ([87aa84e](https://github.com/defenseunicorns/build-harness/commit/87aa84ee8540db27325e08944c73d3cb615a8c43))
+* **deps:** update stable ([#203](https://github.com/defenseunicorns/build-harness/issues/203)) ([632823a](https://github.com/defenseunicorns/build-harness/commit/632823ab9552d26fe0eebe8c97bce78ea5556212))
+* **deps:** update stable ([#205](https://github.com/defenseunicorns/build-harness/issues/205)) ([c55d058](https://github.com/defenseunicorns/build-harness/commit/c55d058a7e0469edf494f0f14dc2e2175ab9c72c))
+* exclude sshuttle from renovate stable pr ([#206](https://github.com/defenseunicorns/build-harness/issues/206)) ([ccb5d4b](https://github.com/defenseunicorns/build-harness/commit/ccb5d4b7808cf80460107bee8180266ff23da3d2))
+
 ## [2.0.3](https://github.com/defenseunicorns/build-harness/compare/2.0.2...2.0.3) (2024-02-15)
 
 
