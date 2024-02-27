@@ -5,7 +5,7 @@ awscli 2.15.23
 # renovate: datasource=git-tags depName=https://github.com/bridgecrewio/checkov.git
 checkov 3.2.26
 # renovate: datasource=github-tags depName=dagger/dagger
-dagger 0.9.11
+dagger 0.10.0
 flux2 2.2.3
 # renovate: datasource=github-tags depName=gruntwork-io/git-xargs
 git-xargs 0.1.11
