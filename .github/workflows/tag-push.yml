@@ -152,7 +152,7 @@ jobs:
           make sbom IMAGE_TO_SCAN=docker:${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.version }}
 
       - name: Upload SBOM
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: |
             sbom.cyclonedx.json
@@ -165,7 +165,7 @@ jobs:
           make vuln-report
 
       - name: Upload Vuln Report
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: |
             vulns.grype.json
