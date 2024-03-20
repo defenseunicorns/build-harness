@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.0.6](https://github.com/defenseunicorns/build-harness/compare/2.0.5...2.0.6) (2024-03-20)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency awscli to v2.15.30 ([#232](https://github.com/defenseunicorns/build-harness/issues/232)) ([9c82788](https://github.com/defenseunicorns/build-harness/commit/9c82788bfceec00a151273aff485c38eccc4e3ea))
+* **deps:** update dependency dagger/dagger to v0.10.2 ([#226](https://github.com/defenseunicorns/build-harness/issues/226)) ([4446ada](https://github.com/defenseunicorns/build-harness/commit/4446ada0cbc86252354728b2abaff5cfb27676b9))
+* **deps:** update dependency defenseunicorns/uds-cli to v0.9.4 ([#231](https://github.com/defenseunicorns/build-harness/issues/231)) ([fe66006](https://github.com/defenseunicorns/build-harness/commit/fe66006c4a20170752c8095d522c276b406c6a38))
+* **deps:** update dependency https://github.com/bridgecrewio/checkov.git to v3.2.34 ([#223](https://github.com/defenseunicorns/build-harness/issues/223)) ([30ad80b](https://github.com/defenseunicorns/build-harness/commit/30ad80b2ced9d01a0d7f2ef694dd05026f39828a))
+* **deps:** update softprops/action-gh-release action to v2 ([#224](https://github.com/defenseunicorns/build-harness/issues/224)) ([c5d37db](https://github.com/defenseunicorns/build-harness/commit/c5d37db9b6c3050628c1efa033a674e70461a21e))
+* **deps:** update stable ([#221](https://github.com/defenseunicorns/build-harness/issues/221)) ([9808239](https://github.com/defenseunicorns/build-harness/commit/9808239fe0b29ded57e47a15028d7d227f03f564))
+* **deps:** update stable ([#225](https://github.com/defenseunicorns/build-harness/issues/225)) ([46902dc](https://github.com/defenseunicorns/build-harness/commit/46902dc0bd96637dbff7f7b0b47eca3be1fc1135))
+* **deps:** update stable ([#228](https://github.com/defenseunicorns/build-harness/issues/228)) ([df770f3](https://github.com/defenseunicorns/build-harness/commit/df770f354fc8a3d878cae5da7d5c931b7838d236))
+* **deps:** update stable ([#233](https://github.com/defenseunicorns/build-harness/issues/233)) ([9faf8fe](https://github.com/defenseunicorns/build-harness/commit/9faf8fea30a773e875282c60c86d08fe4c043bc8))
+* **deps:** update stable ([#234](https://github.com/defenseunicorns/build-harness/issues/234)) ([6731a4d](https://github.com/defenseunicorns/build-harness/commit/6731a4d51d02ff186a1e5838baa3ee42e131d07a))
+* **deps:** update stable to v3.2.37 ([#227](https://github.com/defenseunicorns/build-harness/issues/227)) ([bfa5452](https://github.com/defenseunicorns/build-harness/commit/bfa54525d809b5ec2ca9da13d6371b78720ee72a))
+* **deps:** update stable to v3.2.38 ([#229](https://github.com/defenseunicorns/build-harness/issues/229)) ([5231fa5](https://github.com/defenseunicorns/build-harness/commit/5231fa50568e920e60d395d87552ec950eedd804))
+* **deps:** update tj-actions/changed-files action to v43 ([#230](https://github.com/defenseunicorns/build-harness/issues/230)) ([b2399f8](https://github.com/defenseunicorns/build-harness/commit/b2399f8dfebeb3772d9b0ad1f8d08f011bf18c36))
+
 ## [2.0.5](https://github.com/defenseunicorns/build-harness/compare/2.0.4...2.0.5) (2024-03-08)
 
 
