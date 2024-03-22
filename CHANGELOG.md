@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.9](https://github.com/defenseunicorns/build-harness/compare/2.0.8...2.0.9) (2024-03-22)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency defenseunicorns/zarf to v0.32.6 ([#241](https://github.com/defenseunicorns/build-harness/issues/241)) ([d5dfd2b](https://github.com/defenseunicorns/build-harness/commit/d5dfd2b00c8b4b256aa1e7fef5f25c2f7d5e89e3))
+* **deps:** update ghcr.io/defenseunicorns/build-harness/build-harness docker tag to v2.0.8 ([#239](https://github.com/defenseunicorns/build-harness/issues/239)) ([81f135a](https://github.com/defenseunicorns/build-harness/commit/81f135ac3bbd6338ed880d540d1feed560959cdf))
+
 ## [2.0.8](https://github.com/defenseunicorns/build-harness/compare/2.0.7...2.0.8) (2024-03-21)
 
 
