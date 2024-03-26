@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.12](https://github.com/defenseunicorns/build-harness/compare/2.0.11...2.0.12) (2024-03-26)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency anchore/syft to v1.1.0 ([#246](https://github.com/defenseunicorns/build-harness/issues/246)) ([92aa56c](https://github.com/defenseunicorns/build-harness/commit/92aa56c8e2255bac4e8a638ba4e28e0e71d0592f))
+* **deps:** update dependency dagger/dagger to v0.10.3 ([#249](https://github.com/defenseunicorns/build-harness/issues/249)) ([77dec4e](https://github.com/defenseunicorns/build-harness/commit/77dec4e4cf530e2c829d94b459f50b23a35dbd7b))
+* **deps:** update stable ([#248](https://github.com/defenseunicorns/build-harness/issues/248)) ([4e9af59](https://github.com/defenseunicorns/build-harness/commit/4e9af5933461f72495c9b3df99361adc8a43ba30))
+
 ## [2.0.11](https://github.com/defenseunicorns/build-harness/compare/2.0.10...2.0.11) (2024-03-25)
 
 
