@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.13](https://github.com/defenseunicorns/build-harness/compare/2.0.12...2.0.13) (2024-03-28)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency awscli to v2.15.33 ([#253](https://github.com/defenseunicorns/build-harness/issues/253)) ([db63581](https://github.com/defenseunicorns/build-harness/commit/db63581a9bb68ebf8087569ea4aff51b8cfe780b))
+* **deps:** update dependency https://github.com/bridgecrewio/checkov.git to v3.2.49 ([#254](https://github.com/defenseunicorns/build-harness/issues/254)) ([c89dd25](https://github.com/defenseunicorns/build-harness/commit/c89dd2581cdd900a104dab62153688290e070c6f))
+* **deps:** update stable ([#250](https://github.com/defenseunicorns/build-harness/issues/250)) ([ebd2a24](https://github.com/defenseunicorns/build-harness/commit/ebd2a243bbb7aa688ecaf122670831f71ed03f8c))
+* **deps:** update tj-actions/changed-files action to v44 ([#251](https://github.com/defenseunicorns/build-harness/issues/251)) ([58ddcb3](https://github.com/defenseunicorns/build-harness/commit/58ddcb38085c38853a592ace4d622065ff81f4a8))
+
 ## [2.0.12](https://github.com/defenseunicorns/build-harness/compare/2.0.11...2.0.12) (2024-03-26)
 
 
