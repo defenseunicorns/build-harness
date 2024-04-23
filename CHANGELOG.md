@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.15](https://github.com/defenseunicorns/build-harness/compare/2.0.14...2.0.15) (2024-04-23)
+
+
+### Miscellaneous Chores
+
+* **deps:** update ghcr.io/defenseunicorns/build-harness/build-harness docker tag to v2.0.14 ([#258](https://github.com/defenseunicorns/build-harness/issues/258)) ([9e7e6f3](https://github.com/defenseunicorns/build-harness/commit/9e7e6f36b6b081c40695f12ab0c5772a60acc43f))
+* **deps:** update stable ([#260](https://github.com/defenseunicorns/build-harness/issues/260)) ([9965dce](https://github.com/defenseunicorns/build-harness/commit/9965dce3815db507fa131cceffb04866ae4a7456))
+
 ## [2.0.14](https://github.com/defenseunicorns/build-harness/compare/2.0.13...2.0.14) (2024-04-17)
 
 
