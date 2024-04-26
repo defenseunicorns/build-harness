@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.16](https://github.com/defenseunicorns/build-harness/compare/2.0.15...2.0.16) (2024-04-26)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency anchore/syft to v1.3.0 ([#265](https://github.com/defenseunicorns/build-harness/issues/265)) ([5ddf4f6](https://github.com/defenseunicorns/build-harness/commit/5ddf4f63e6098e2b663e77d209057c7800461da7))
+* **deps:** update dependency awscli to v2.15.41 ([#263](https://github.com/defenseunicorns/build-harness/issues/263)) ([d41e5f0](https://github.com/defenseunicorns/build-harness/commit/d41e5f02cc5b7073c20722019d4c583e548b165a))
+* **deps:** update ghcr.io/defenseunicorns/build-harness/build-harness docker tag to v2.0.15 ([#261](https://github.com/defenseunicorns/build-harness/issues/261)) ([d7098af](https://github.com/defenseunicorns/build-harness/commit/d7098afaa09aaebfb2cf7ad4f1f3efe24ac540bd))
+* **deps:** update stable ([#264](https://github.com/defenseunicorns/build-harness/issues/264)) ([b10e011](https://github.com/defenseunicorns/build-harness/commit/b10e01186f273397032cf9acada936627bb3c250))
+
 ## [2.0.15](https://github.com/defenseunicorns/build-harness/compare/2.0.14...2.0.15) (2024-04-23)
 
 
