@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.26](https://github.com/defenseunicorns/build-harness/compare/2.0.25...2.0.26) (2024-06-10)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency defenseunicorns/uds-cli to v0.11.1 ([#304](https://github.com/defenseunicorns/build-harness/issues/304)) ([e50f574](https://github.com/defenseunicorns/build-harness/commit/e50f574ee34345a176c99919c79a401ce17469cd))
+* remove the schedule from the renovate config ([#302](https://github.com/defenseunicorns/build-harness/issues/302)) ([f183cad](https://github.com/defenseunicorns/build-harness/commit/f183cadd2ace8b60882a4c731132f81c3d941d10))
+
 ## [2.0.25](https://github.com/defenseunicorns/build-harness/compare/2.0.24...2.0.25) (2024-06-10)
 
 
