@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.27](https://github.com/defenseunicorns/build-harness/compare/2.0.26...2.0.27) (2024-06-25)
+
+
+### Miscellaneous Chores
+
+* **deps:** update docker/build-push-action action to v6 ([#305](https://github.com/defenseunicorns/build-harness/issues/305)) ([b2ce4d3](https://github.com/defenseunicorns/build-harness/commit/b2ce4d3d4c60c676ecc4bbf5595b9f21809cafd0))
+* **deps:** update stable ([#307](https://github.com/defenseunicorns/build-harness/issues/307)) ([90efa78](https://github.com/defenseunicorns/build-harness/commit/90efa787c462696dcca100025d54b04babec81e6))
+
 ## [2.0.26](https://github.com/defenseunicorns/build-harness/compare/2.0.25...2.0.26) (2024-06-10)
 
 
