@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.32](https://github.com/defenseunicorns/build-harness/compare/2.0.31...2.0.32) (2024-07-23)
+
+
+### Miscellaneous Chores
+
+* **deps:** update stable ([#324](https://github.com/defenseunicorns/build-harness/issues/324)) ([273f1a5](https://github.com/defenseunicorns/build-harness/commit/273f1a54d8e4590ac5f45440748944f87d6d424a))
+* **deps:** update stable ([#327](https://github.com/defenseunicorns/build-harness/issues/327)) ([4b6ed85](https://github.com/defenseunicorns/build-harness/commit/4b6ed8525294063aabec719c7539e0167e3d534b))
+* **deps:** update stable to v3.2.200 ([#326](https://github.com/defenseunicorns/build-harness/issues/326)) ([8122c53](https://github.com/defenseunicorns/build-harness/commit/8122c530a98de288a5c61b5dbb9bdcaebeb88db2))
+
 ## [2.0.31](https://github.com/defenseunicorns/build-harness/compare/2.0.30...2.0.31) (2024-07-22)
 
 
