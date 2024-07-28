@@ -22,7 +22,7 @@ k9s 0.32.5
 kubectl 1.30.3
 # renovate: datasource=github-tags depName=opentofu/opentofu versioning=loose
 opentofu 1.8.0-rc1
-pre-commit 3.7.1
+pre-commit 3.8.0
 sops 3.9.0
 # renovate: datasource=github-tags depName=anchore/syft
 syft 1.9.0
