@@ -84,7 +84,7 @@ jobs:
           fetch-depth: 0
       - name: changed-files
         id: changed-files
-        uses: tj-actions/changed-files@v44
+        uses: tj-actions/changed-files@v45
         with:
           base_sha: ${{ github.event.merge_group.base_sha }}
           sha: ${{ github.event.merge_group.head_sha }}
