@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.41](https://github.com/defenseunicorns/build-harness/compare/2.0.40...2.0.41) (2024-09-21)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency dagger/dagger to v0.13.3 ([#390](https://github.com/defenseunicorns/build-harness/issues/390)) ([42d189c](https://github.com/defenseunicorns/build-harness/commit/42d189c65118b75bf4fd8eedd391c2ee8d1a7485))
+* **deps:** update stable ([#387](https://github.com/defenseunicorns/build-harness/issues/387)) ([84faed2](https://github.com/defenseunicorns/build-harness/commit/84faed2b22c54e0052efc60f215e3964c508686f))
+* **deps:** update stable ([#389](https://github.com/defenseunicorns/build-harness/issues/389)) ([c56407a](https://github.com/defenseunicorns/build-harness/commit/c56407a836121cd66141af57db2d10fb7f8c4108))
+
 ## [2.0.40](https://github.com/defenseunicorns/build-harness/compare/2.0.39...2.0.40) (2024-09-20)
 
 
