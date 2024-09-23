@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.42](https://github.com/defenseunicorns/build-harness/compare/2.0.41...2.0.42) (2024-09-23)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency awscli to v2.17.57 ([#393](https://github.com/defenseunicorns/build-harness/issues/393)) ([11e31dd](https://github.com/defenseunicorns/build-harness/commit/11e31dd6ce1e3f2d59c59c451c9c678064cca32f))
+* **deps:** update ghcr.io/defenseunicorns/build-harness/build-harness docker tag to v2.0.41 ([#391](https://github.com/defenseunicorns/build-harness/issues/391)) ([f5d9987](https://github.com/defenseunicorns/build-harness/commit/f5d99870016c33a204b76827b6012f20814a2370))
+
 ## [2.0.41](https://github.com/defenseunicorns/build-harness/compare/2.0.40...2.0.41) (2024-09-21)
 
 
