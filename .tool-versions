@@ -12,7 +12,7 @@ git-xargs 0.1.11
 golang 1.23.1
 golangci-lint 1.61.0
 # renovate: datasource=github-tags depName=anchore/grype
-grype 0.80.2
+grype 0.81.0
 hadolint 2.12.0
 helm 3.16.1
 # renovate: datasource=github-releases depName=k3d-io/k3d
