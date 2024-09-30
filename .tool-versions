@@ -6,7 +6,7 @@ awscli 2.17.61
 checkov 3.2.255
 # renovate: datasource=github-tags depName=dagger/dagger
 dagger 0.13.3
-flux2 2.3.0
+flux2 2.4.0
 # renovate: datasource=github-tags depName=gruntwork-io/git-xargs
 git-xargs 0.1.11
 golang 1.23.1
