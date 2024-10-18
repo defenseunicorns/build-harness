@@ -1,5 +1,49 @@
 # Changelog
 
+## [2.0.43](https://github.com/defenseunicorns/build-harness/compare/2.0.42...2.0.43) (2024-10-18)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency anchore/grype to v0.81.0 ([#398](https://github.com/defenseunicorns/build-harness/issues/398)) ([99890f9](https://github.com/defenseunicorns/build-harness/commit/99890f94e37f38e4ea96e85ff71dc9efa9fd6cb1))
+* **deps:** update dependency anchore/grype to v0.82.0 ([#412](https://github.com/defenseunicorns/build-harness/issues/412)) ([5b5888d](https://github.com/defenseunicorns/build-harness/commit/5b5888d2a31abca7df16c3efd67458da92c8f1dd))
+* **deps:** update dependency awscli to v2.17.58 ([#397](https://github.com/defenseunicorns/build-harness/issues/397)) ([d291188](https://github.com/defenseunicorns/build-harness/commit/d291188f1fe2c917c154bfb55d4e4e4e8794153f))
+* **deps:** update dependency awscli to v2.17.59 ([#399](https://github.com/defenseunicorns/build-harness/issues/399)) ([dce4024](https://github.com/defenseunicorns/build-harness/commit/dce40249794e5069f2e194920a3a9c5c8cf3c68f))
+* **deps:** update dependency awscli to v2.17.61 ([#402](https://github.com/defenseunicorns/build-harness/issues/402)) ([fdd39f1](https://github.com/defenseunicorns/build-harness/commit/fdd39f16fb42e28debcfbf3ac32333959feea2bc))
+* **deps:** update dependency awscli to v2.17.62 ([#404](https://github.com/defenseunicorns/build-harness/issues/404)) ([ff24da5](https://github.com/defenseunicorns/build-harness/commit/ff24da59170a73c190ad830182d53eeb49ad7ee3))
+* **deps:** update dependency awscli to v2.18.2 ([#414](https://github.com/defenseunicorns/build-harness/issues/414)) ([1cbf464](https://github.com/defenseunicorns/build-harness/commit/1cbf464b7aa6627809347d7f2a363e98402a9262))
+* **deps:** update dependency awscli to v2.18.4 ([#417](https://github.com/defenseunicorns/build-harness/issues/417)) ([766c446](https://github.com/defenseunicorns/build-harness/commit/766c446caacae6a9934fe7f4edc9befcb8681b51))
+* **deps:** update dependency awscli to v2.18.5 ([#419](https://github.com/defenseunicorns/build-harness/issues/419)) ([f44c5cf](https://github.com/defenseunicorns/build-harness/commit/f44c5cfd21b694767b61351e0ebe1c50da6d6e07))
+* **deps:** update dependency awscli to v2.18.7 ([#426](https://github.com/defenseunicorns/build-harness/issues/426)) ([c710733](https://github.com/defenseunicorns/build-harness/commit/c710733b41d15f54b50ab742177de34b2a69af15))
+* **deps:** update dependency awscli to v2.18.8 ([#429](https://github.com/defenseunicorns/build-harness/issues/429)) ([5d7aa60](https://github.com/defenseunicorns/build-harness/commit/5d7aa60766145802934db5e944be707425ecb913))
+* **deps:** update dependency awscli to v2.18.9 ([#431](https://github.com/defenseunicorns/build-harness/issues/431)) ([90c8316](https://github.com/defenseunicorns/build-harness/commit/90c8316151faedf4b21dfcc0cb75859326f5c10a))
+* **deps:** update dependency dagger/dagger to v0.13.4 ([#415](https://github.com/defenseunicorns/build-harness/issues/415)) ([b92e867](https://github.com/defenseunicorns/build-harness/commit/b92e86736da8138b2a59a6c69a845c0a5f60f0cc))
+* **deps:** update dependency dagger/dagger to v0.13.5 ([#418](https://github.com/defenseunicorns/build-harness/issues/418)) ([ee6597e](https://github.com/defenseunicorns/build-harness/commit/ee6597e86bad4844bb247ff48dc98dd1e15aa216))
+* **deps:** update dependency defenseunicorns/uds-cli to v0.18.0 ([#432](https://github.com/defenseunicorns/build-harness/issues/432)) ([27a827e](https://github.com/defenseunicorns/build-harness/commit/27a827e7d9120fa91839ed8bdf87c9fe1d716445))
+* **deps:** update dependency ekristen/aws-nuke to v3.24.0 ([#401](https://github.com/defenseunicorns/build-harness/issues/401)) ([2277df6](https://github.com/defenseunicorns/build-harness/commit/2277df679826c6efafb829489885232f08f49891))
+* **deps:** update dependency ekristen/aws-nuke to v3.26.0 ([#407](https://github.com/defenseunicorns/build-harness/issues/407)) ([8f7201e](https://github.com/defenseunicorns/build-harness/commit/8f7201e490d09fef1fc75b4fb694d0792c01566f))
+* **deps:** update dependency ekristen/aws-nuke to v3.28.0 ([#430](https://github.com/defenseunicorns/build-harness/issues/430)) ([0f5f117](https://github.com/defenseunicorns/build-harness/commit/0f5f117cd7eb95d0a9d25d22d62f52cfa14df867))
+* **deps:** update dependency flux2 to v2.4.0 ([#403](https://github.com/defenseunicorns/build-harness/issues/403)) ([1c6e1f2](https://github.com/defenseunicorns/build-harness/commit/1c6e1f276fcedd52584d66acc5a244599050ab0b))
+* **deps:** update dependency pre-commit to v4 ([#410](https://github.com/defenseunicorns/build-harness/issues/410)) ([a21a7dc](https://github.com/defenseunicorns/build-harness/commit/a21a7dc520ab466f6c2b93fa1f4c4d9ef198e893))
+* **deps:** update dependency pre-commit to v4.0.1 ([#413](https://github.com/defenseunicorns/build-harness/issues/413)) ([b4e4ff5](https://github.com/defenseunicorns/build-harness/commit/b4e4ff5103b4f642029cdb9af44434dd926522f1))
+* **deps:** update dependency terraform to v1.9.8 ([#428](https://github.com/defenseunicorns/build-harness/issues/428)) ([803aaf3](https://github.com/defenseunicorns/build-harness/commit/803aaf39101f0f55286287af8fe02e2c2c50dba0))
+* **deps:** update ghcr.io/defenseunicorns/build-harness/build-harness docker tag to v2.0.42 ([#396](https://github.com/defenseunicorns/build-harness/issues/396)) ([39c0ce2](https://github.com/defenseunicorns/build-harness/commit/39c0ce2749a94955b2bba168ec8312ea13751d55))
+* **deps:** update peter-murray/workflow-application-token-action action to v4 ([#425](https://github.com/defenseunicorns/build-harness/issues/425)) ([cfd2af8](https://github.com/defenseunicorns/build-harness/commit/cfd2af84a73e0f99b6e374ad9ed1677f80ddf5b5))
+* **deps:** update stable ([#394](https://github.com/defenseunicorns/build-harness/issues/394)) ([fefedaf](https://github.com/defenseunicorns/build-harness/commit/fefedaf38398dd862a3d49a4a13e55b904e464b5))
+* **deps:** update stable ([#400](https://github.com/defenseunicorns/build-harness/issues/400)) ([5408ce5](https://github.com/defenseunicorns/build-harness/commit/5408ce50ea256c2444188e1872cce93eda953327))
+* **deps:** update stable ([#406](https://github.com/defenseunicorns/build-harness/issues/406)) ([ad4ff61](https://github.com/defenseunicorns/build-harness/commit/ad4ff61726388810529448aa0730a8cf77250003))
+* **deps:** update stable ([#408](https://github.com/defenseunicorns/build-harness/issues/408)) ([90262d0](https://github.com/defenseunicorns/build-harness/commit/90262d06e7fbaaa45806325a5a60ccd863178b89))
+* **deps:** update stable ([#409](https://github.com/defenseunicorns/build-harness/issues/409)) ([7d636bf](https://github.com/defenseunicorns/build-harness/commit/7d636bf27a0989878b3a5ffa1c6fc2e72fe68a44))
+* **deps:** update stable ([#411](https://github.com/defenseunicorns/build-harness/issues/411)) ([c1f1201](https://github.com/defenseunicorns/build-harness/commit/c1f1201bc4f4fe8aa5d4af71049dcf5c0680f0bb))
+* **deps:** update stable ([#416](https://github.com/defenseunicorns/build-harness/issues/416)) ([1a8a67a](https://github.com/defenseunicorns/build-harness/commit/1a8a67a0e8713196660a86dafdaf50cc330f8cab))
+* **deps:** update stable ([#422](https://github.com/defenseunicorns/build-harness/issues/422)) ([7130f30](https://github.com/defenseunicorns/build-harness/commit/7130f309d858f40be17d7925cc8fbd320ae7729f))
+* **deps:** update stable ([#424](https://github.com/defenseunicorns/build-harness/issues/424)) ([cb66919](https://github.com/defenseunicorns/build-harness/commit/cb66919804665a589fd86e945f10b2f42cdc29d5))
+* **deps:** update stable to v3.2.256 ([#405](https://github.com/defenseunicorns/build-harness/issues/405)) ([d86dc88](https://github.com/defenseunicorns/build-harness/commit/d86dc88e2bddc5c75f03d9a9f81d184d826ad1fd))
+* **deps:** update stable to v3.2.258 ([#420](https://github.com/defenseunicorns/build-harness/issues/420)) ([39b4294](https://github.com/defenseunicorns/build-harness/commit/39b429447c26d4dfdb2b6087c4e64b14cb713a64))
+* **deps:** update stable to v3.2.260 ([#421](https://github.com/defenseunicorns/build-harness/issues/421)) ([d3d26ec](https://github.com/defenseunicorns/build-harness/commit/d3d26ec99a8d0bbc04f7844850b2d80ec8b47a52))
+* **deps:** update stable to v3.2.264 ([#423](https://github.com/defenseunicorns/build-harness/issues/423)) ([e1b06c1](https://github.com/defenseunicorns/build-harness/commit/e1b06c1b86932776600109caa6f59b8f17142257))
+* **deps:** update stable to v3.2.267 ([#427](https://github.com/defenseunicorns/build-harness/issues/427)) ([e0339f9](https://github.com/defenseunicorns/build-harness/commit/e0339f9f2e4080acdcad966360b259ac9564b83a))
+
 ## [2.0.42](https://github.com/defenseunicorns/build-harness/compare/2.0.41...2.0.42) (2024-09-23)
 
 
