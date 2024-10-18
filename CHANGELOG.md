@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.0.44](https://github.com/defenseunicorns/build-harness/compare/2.0.43...2.0.44) (2024-10-18)
+
+
+### Documentation
+
+* Update link to example repo in README ([#435](https://github.com/defenseunicorns/build-harness/issues/435)) ([94665ed](https://github.com/defenseunicorns/build-harness/commit/94665ed2a2a1bc862ef1b8e96446fe75c323e656))
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency defenseunicorns/zarf to v0.42.0 ([#433](https://github.com/defenseunicorns/build-harness/issues/433)) ([a803dc5](https://github.com/defenseunicorns/build-harness/commit/a803dc516a04aec2284d58cbc42dbe293ea5b8b9))
+* **deps:** update ghcr.io/defenseunicorns/build-harness/build-harness docker tag to v2.0.43 ([#436](https://github.com/defenseunicorns/build-harness/issues/436)) ([8067a05](https://github.com/defenseunicorns/build-harness/commit/8067a05a5addf5ccbb346e8358fd7a189df7c850))
+
 ## [2.0.43](https://github.com/defenseunicorns/build-harness/compare/2.0.42...2.0.43) (2024-10-18)
 
 
