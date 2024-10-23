@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.0.44](https://github.com/defenseunicorns/build-harness/compare/2.0.43...2.0.44) (2024-10-23)
+
+
+### Documentation
+
+* Update link to example repo in README ([#435](https://github.com/defenseunicorns/build-harness/issues/435)) ([94665ed](https://github.com/defenseunicorns/build-harness/commit/94665ed2a2a1bc862ef1b8e96446fe75c323e656))
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency awscli to v2.18.12 ([#441](https://github.com/defenseunicorns/build-harness/issues/441)) ([a324f8c](https://github.com/defenseunicorns/build-harness/commit/a324f8cd2e497adc72acfdda82b8ecaa149e3b39))
+* **deps:** update dependency defenseunicorns/zarf to v0.42.0 ([#433](https://github.com/defenseunicorns/build-harness/issues/433)) ([a803dc5](https://github.com/defenseunicorns/build-harness/commit/a803dc516a04aec2284d58cbc42dbe293ea5b8b9))
+* **deps:** update dependency kubectl to v1.31.2 ([#442](https://github.com/defenseunicorns/build-harness/issues/442)) ([0b35028](https://github.com/defenseunicorns/build-harness/commit/0b350280ca1127065a5223d185cc535404151987))
+* **deps:** update ghcr.io/defenseunicorns/build-harness/build-harness docker tag to v2.0.43 ([#436](https://github.com/defenseunicorns/build-harness/issues/436)) ([8067a05](https://github.com/defenseunicorns/build-harness/commit/8067a05a5addf5ccbb346e8358fd7a189df7c850))
+* **deps:** update stable ([#437](https://github.com/defenseunicorns/build-harness/issues/437)) ([3afd4e1](https://github.com/defenseunicorns/build-harness/commit/3afd4e15979d1777314ebf37ab85485b513aa90c))
+* **deps:** update stable ([#438](https://github.com/defenseunicorns/build-harness/issues/438)) ([fa82e57](https://github.com/defenseunicorns/build-harness/commit/fa82e579d5198fa285e6393a2b181daadbb1a383))
+* **deps:** update stable ([#440](https://github.com/defenseunicorns/build-harness/issues/440)) ([ed51bcf](https://github.com/defenseunicorns/build-harness/commit/ed51bcf7df2f8c13cfab36d2253b446e52308d54))
+* **deps:** update stable to v3.2.269 ([#439](https://github.com/defenseunicorns/build-harness/issues/439)) ([b1a5033](https://github.com/defenseunicorns/build-harness/commit/b1a50335299fee7683f96a6d447c9d3334f69a7e))
+
 ## [2.0.43](https://github.com/defenseunicorns/build-harness/compare/2.0.42...2.0.43) (2024-10-18)
 
 
