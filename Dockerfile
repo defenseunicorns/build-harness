@@ -91,7 +91,7 @@ RUN asdf install
 
 # Install sshuttle. Get versions by running `pip index versions sshuttle`
 # renovate: datasource=pypi depName=sshuttle
-ENV SSHUTTLE_VERSION=1.1.1
+ENV SSHUTTLE_VERSION=1.1.2
 RUN pip install --force-reinstall -v "sshuttle==${SSHUTTLE_VERSION}"
 
 # Support tools installed as root when running as any other user
