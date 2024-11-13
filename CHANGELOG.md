@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.0.45](https://github.com/defenseunicorns/build-harness/compare/2.0.44...2.0.45) (2024-11-13)
+
+
+### Bug Fixes
+
+* Change OpenTofu datasource to github-releases ([#461](https://github.com/defenseunicorns/build-harness/issues/461)) ([4aabc7d](https://github.com/defenseunicorns/build-harness/commit/4aabc7d5974fe37635964ba5797b9ed95d84ad91))
+
+
+### Miscellaneous Chores
+
+* **deps:** update ghcr.io/defenseunicorns/build-harness/build-harness docker tag to v2.0.44 ([#455](https://github.com/defenseunicorns/build-harness/issues/455)) ([c162220](https://github.com/defenseunicorns/build-harness/commit/c162220b81973deb6aaaae8e3f4824af68cbfeb6))
+* **deps:** update stable ([#457](https://github.com/defenseunicorns/build-harness/issues/457)) ([1cb2b2d](https://github.com/defenseunicorns/build-harness/commit/1cb2b2db0d3c5bd1028dfa6565a21d91fa140666))
+* **deps:** update stable ([#458](https://github.com/defenseunicorns/build-harness/issues/458)) ([9694933](https://github.com/defenseunicorns/build-harness/commit/9694933e7c27c0675f0f383f14e87a7c3a0330ed))
+* **deps:** update stable ([#460](https://github.com/defenseunicorns/build-harness/issues/460)) ([e6fb594](https://github.com/defenseunicorns/build-harness/commit/e6fb594d19da4c7d5f4c187686e4a96cbec388c6))
+* **deps:** update stable to v3.2.282 ([#459](https://github.com/defenseunicorns/build-harness/issues/459)) ([1b6d4f6](https://github.com/defenseunicorns/build-harness/commit/1b6d4f6cd69d0b122b69fc95053e85ca7080cd56))
+
 ## [2.0.44](https://github.com/defenseunicorns/build-harness/compare/2.0.43...2.0.44) (2024-11-05)
 
 
