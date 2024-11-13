@@ -20,7 +20,7 @@ k3d 5.7.4
 # renovate: datasource=github-tags depName=derailed/k9s
 k9s 0.32.5
 kubectl 1.31.2
-# renovate: datasource=github-tags depName=opentofu/opentofu versioning=loose
+# renovate: datasource=github-releases depName=opentofu/opentofu versioning=loose
 opentofu 1.8.5
 pre-commit 4.0.1
 sops 3.9.1
