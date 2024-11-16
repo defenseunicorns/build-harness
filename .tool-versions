@@ -33,6 +33,6 @@ tfsec 1.28.11
 # renovate: datasource=github-releases depName=defenseunicorns/uds-cli
 uds-cli 0.19.0
 # renovate: datasource=github-tags depName=mikefarah/yq
-yq 4.44.3
+yq 4.44.5
 # renovate: datasource=github-releases depName=defenseunicorns/zarf
 zarf 0.43.0
