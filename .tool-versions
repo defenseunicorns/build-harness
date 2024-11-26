@@ -1,7 +1,7 @@
 adr-tools 3.0.0
 # renovate: datasource=github-releases depName=ekristen/aws-nuke
 aws-nuke 3.32.0
-awscli 2.22.5
+awscli 2.22.6
 # renovate: datasource=git-tags depName=https://github.com/bridgecrewio/checkov.git
 checkov 3.2.317
 # renovate: datasource=github-tags depName=dagger/dagger
