@@ -17,11 +17,13 @@ RUN ARCH_STRING=$(uname -m) \
     bzip2 \
     bzip2-devel \
     'dnf-command(config-manager)' \
+    ca-certificates \
     findutils \
     gcc \
     gcc-c++ \
     gettext \
     git \
+    httpd-tools \
     iptables-nft \
     jq \
     libffi-devel \
