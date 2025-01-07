@@ -1,38 +1,38 @@
 adr-tools 3.0.0
 # renovate: datasource=github-releases depName=ekristen/aws-nuke
-aws-nuke 3.33.0
-awscli 2.22.7
+aws-nuke 3.42.0
+awscli 2.22.30
 # renovate: datasource=git-tags depName=https://github.com/bridgecrewio/checkov.git
-checkov 3.2.322
+checkov 3.2.350
 # renovate: datasource=github-tags depName=dagger/dagger
-dagger 0.14.0
+dagger 0.15.1
 flux2 2.4.0
 # renovate: datasource=github-tags depName=gruntwork-io/git-xargs
 git-xargs 0.1.11
-golang 1.23.3
-golangci-lint 1.62.2
+golang 1.23.4
+golangci-lint 1.63.4
 # renovate: datasource=github-tags depName=anchore/grype
-grype 0.85.0
+grype 0.86.1
 hadolint 2.12.0
-helm 3.16.3
+helm 3.16.4
 # renovate: datasource=github-releases depName=k3d-io/k3d
 k3d 5.7.5
 # renovate: datasource=github-tags depName=derailed/k9s
 k9s 0.32.7
-kubectl 1.31.3
+kubectl 1.32.0
 # renovate: datasource=github-releases depName=opentofu/opentofu versioning=loose
-opentofu 1.8.6
+opentofu 1.8.8
 pre-commit 4.0.1
-sops 3.9.1
+sops 3.9.3
 # renovate: datasource=github-tags depName=anchore/syft
-syft 1.17.0
-terraform 1.10.0
+syft 1.18.1
+terraform 1.10.3
 terraform-docs 0.19.0
 tflint 0.54.0
-tfsec 1.28.11
+tfsec 1.28.12
 # renovate: datasource=github-releases depName=defenseunicorns/uds-cli
-uds-cli 0.19.0
+uds-cli 0.20.0
 # renovate: datasource=github-tags depName=mikefarah/yq
-yq 4.44.5
+yq 4.44.6
 # renovate: datasource=github-releases depName=defenseunicorns/zarf
-zarf 0.43.1
+zarf 0.45.0
