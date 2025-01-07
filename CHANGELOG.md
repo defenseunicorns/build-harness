@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.48](https://github.com/defenseunicorns/build-harness/compare/2.0.47...2.0.48) (2025-01-07)
+
+
+### Miscellaneous Chores
+
+* **deps:** update stable ([#507](https://github.com/defenseunicorns/build-harness/issues/507)) ([9060704](https://github.com/defenseunicorns/build-harness/commit/9060704cb2af945d2920ba199960ba73c574b0b0))
+
 ## [2.0.47](https://github.com/defenseunicorns/build-harness/compare/2.0.46...2.0.47) (2025-01-07)
 
 
