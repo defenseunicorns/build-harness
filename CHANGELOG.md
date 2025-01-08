@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.49](https://github.com/defenseunicorns/build-harness/compare/2.0.48...2.0.49) (2025-01-08)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency https://github.com/bridgecrewio/checkov.git to v3.2.351 ([#514](https://github.com/defenseunicorns/build-harness/issues/514)) ([74ab9d7](https://github.com/defenseunicorns/build-harness/commit/74ab9d76e1daabb03caeaf7bee062b6af5cb2fbb))
+* **deps:** update dependency terraform to v1.10.4 ([#513](https://github.com/defenseunicorns/build-harness/issues/513)) ([c3d3123](https://github.com/defenseunicorns/build-harness/commit/c3d31232e79483d950765213100f25c8ba959c1c))
+* **deps:** update ghcr.io/defenseunicorns/build-harness/build-harness docker tag to v2.0.47 ([#510](https://github.com/defenseunicorns/build-harness/issues/510)) ([343c79a](https://github.com/defenseunicorns/build-harness/commit/343c79ad77071fc72c6ebcef203156edaa66c34c))
+* **deps:** update ghcr.io/defenseunicorns/build-harness/build-harness docker tag to v2.0.48 ([#512](https://github.com/defenseunicorns/build-harness/issues/512)) ([4736688](https://github.com/defenseunicorns/build-harness/commit/473668893f83a455acdc56d922e5bd4e08940e55))
+
 ## [2.0.48](https://github.com/defenseunicorns/build-harness/compare/2.0.47...2.0.48) (2025-01-07)
 
 
