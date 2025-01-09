@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.50](https://github.com/defenseunicorns/build-harness/compare/2.0.49...2.0.50) (2025-01-09)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency awscli to v2.22.31 ([#517](https://github.com/defenseunicorns/build-harness/issues/517)) ([c553b25](https://github.com/defenseunicorns/build-harness/commit/c553b250e5731277c0d895caca2aafde6651b4a5))
+* **deps:** update dependency https://github.com/bridgecrewio/checkov.git to v3.2.352 ([#518](https://github.com/defenseunicorns/build-harness/issues/518)) ([1f4dace](https://github.com/defenseunicorns/build-harness/commit/1f4daced94b82cc8854c79cda03568a0a6c75bdf))
+* **deps:** update ghcr.io/defenseunicorns/build-harness/build-harness docker tag to v2.0.49 ([#515](https://github.com/defenseunicorns/build-harness/issues/515)) ([8ba14fa](https://github.com/defenseunicorns/build-harness/commit/8ba14fa81c8f8a9f5b7ba749f066e52ef53c6956))
+* **deps:** update stable ([#519](https://github.com/defenseunicorns/build-harness/issues/519)) ([fa16fa0](https://github.com/defenseunicorns/build-harness/commit/fa16fa0d0585ff4dbd62c532ae848e1016c02820))
+
 ## [2.0.49](https://github.com/defenseunicorns/build-harness/compare/2.0.48...2.0.49) (2025-01-08)
 
 
