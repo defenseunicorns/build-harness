@@ -35,4 +35,4 @@ uds-cli 0.20.0
 # renovate: datasource=github-tags depName=mikefarah/yq
 yq 4.44.6
 # renovate: datasource=github-releases depName=defenseunicorns/zarf
-zarf 0.45.0
+zarf 0.46.0
