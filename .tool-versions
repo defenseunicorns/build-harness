@@ -29,7 +29,7 @@ syft 1.18.1
 terraform 1.10.4
 terraform-docs 0.19.0
 tflint 0.54.0
-tfsec 1.28.12
+tfsec 1.28.13
 # renovate: datasource=github-releases depName=defenseunicorns/uds-cli
 uds-cli 0.20.0
 # renovate: datasource=github-tags depName=mikefarah/yq
