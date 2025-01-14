@@ -5,10 +5,10 @@ awscli 2.22.34
 # renovate: datasource=git-tags depName=https://github.com/bridgecrewio/checkov.git
 checkov 3.2.352
 # renovate: datasource=github-tags depName=dagger/dagger
-dagger 0.15.1
+dagger 0.15.2
 flux2 2.4.0
 # renovate: datasource=github-tags depName=gruntwork-io/git-xargs
-git-xargs 0.1.11
+git-xargs 0.1.12
 golang 1.23.4
 golangci-lint 1.63.4
 # renovate: datasource=github-tags depName=anchore/grype
