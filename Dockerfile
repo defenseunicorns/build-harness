@@ -78,6 +78,8 @@ RUN asdf plugin add git-xargs https://github.com/defenseunicorns/asdf-git-xargs.
 RUN asdf plugin add opentofu https://github.com/defenseunicorns/asdf-opentofu.git
 # uds-cli (uds) needs to be added separately since it doesn't have a "shortform" option in the asdf registry yet
 RUN asdf plugin add uds-cli https://github.com/defenseunicorns/asdf-uds-cli.git
+# atmos needs to be added separately since it doesn't have a "shortform" option in the asdf registry yet
+RUN asdf plugin add atmos https://github.com/cloudposse/asdf-atmos.git
 
 # Install all other ASDF plugins that are present in the .tool-versions file.
 RUN cat /root/.tool-versions | \
@@ -87,6 +89,7 @@ RUN cat /root/.tool-versions | \
   grep -v "git-xargs" | \
   grep -v "opentofu" | \
   grep -v "uds-cli" | \
+  grep -v "atmos" | \
   xargs -i asdf plugin add {}
 # Install all ASDF versions that are present in the .tool-versions file
 RUN asdf install
