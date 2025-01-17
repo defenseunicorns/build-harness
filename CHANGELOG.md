@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.1.0](https://github.com/defenseunicorns/build-harness/compare/2.0.50...2.1.0) (2025-01-17)
+
+
+### Features
+
+* add atmos ([#530](https://github.com/defenseunicorns/build-harness/issues/530)) ([ab05d1f](https://github.com/defenseunicorns/build-harness/commit/ab05d1fc8fdb415a2366fce80ebaa3212aac8981))
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency awscli to v2.22.34 ([#526](https://github.com/defenseunicorns/build-harness/issues/526)) ([dd3e7cc](https://github.com/defenseunicorns/build-harness/commit/dd3e7ccd5f291ea695bae8a939b6da22a6e7b179))
+* **deps:** update dependency ekristen/aws-nuke to v3.44.0 ([#527](https://github.com/defenseunicorns/build-harness/issues/527)) ([876e4c8](https://github.com/defenseunicorns/build-harness/commit/876e4c85def25c37865443b778eae18ad211c88b))
+* **deps:** update dependency tflint to v0.55.0 ([#525](https://github.com/defenseunicorns/build-harness/issues/525)) ([3d32e6f](https://github.com/defenseunicorns/build-harness/commit/3d32e6f4b3a866eef827dbba5475ade32fe1a29b))
+* **deps:** update dependency tfsec to v1.28.13 ([#523](https://github.com/defenseunicorns/build-harness/issues/523)) ([e87f8e8](https://github.com/defenseunicorns/build-harness/commit/e87f8e88a627390dac841af4195f1766f1c27e62))
+* **deps:** update stable ([#520](https://github.com/defenseunicorns/build-harness/issues/520)) ([552df2e](https://github.com/defenseunicorns/build-harness/commit/552df2e686eb13531d3eba6442163d4c02500dd8))
+* **deps:** update stable ([#522](https://github.com/defenseunicorns/build-harness/issues/522)) ([59ae2c2](https://github.com/defenseunicorns/build-harness/commit/59ae2c268b48db345bec278c75c6d9381b227b2b))
+* **deps:** update stable to v4.45.1 ([#524](https://github.com/defenseunicorns/build-harness/issues/524)) ([8081486](https://github.com/defenseunicorns/build-harness/commit/8081486b9042048196af7c03345f8d5226d8dbd9))
+
 ## [2.0.50](https://github.com/defenseunicorns/build-harness/compare/2.0.49...2.0.50) (2025-01-09)
 
 
