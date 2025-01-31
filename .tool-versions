@@ -10,7 +10,7 @@ checkov 3.2.360
 dagger 0.15.3
 flux2 2.4.0
 # renovate: datasource=github-tags depName=gruntwork-io/git-xargs
-git-xargs 0.1.14
+git-xargs 0.1.15
 golang 1.23.5
 golangci-lint 1.63.4
 # renovate: datasource=github-tags depName=anchore/grype
