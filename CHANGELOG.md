@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.1.3](https://github.com/defenseunicorns/build-harness/compare/2.1.2...2.1.3) (2025-02-03)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency awscli to v2.23.11 ([#540](https://github.com/defenseunicorns/build-harness/issues/540)) ([94220d2](https://github.com/defenseunicorns/build-harness/commit/94220d2727dc3e97bed7f160909bec9f37a1ff5a))
+* **deps:** update dependency ekristen/aws-nuke to v3.46.1 ([#538](https://github.com/defenseunicorns/build-harness/issues/538)) ([2ceacce](https://github.com/defenseunicorns/build-harness/commit/2ceacced2e941b77c32c405928bc623593d15b6e))
+* **deps:** update dependency gruntwork-io/git-xargs to v0.1.15 ([#539](https://github.com/defenseunicorns/build-harness/issues/539)) ([2ad73f9](https://github.com/defenseunicorns/build-harness/commit/2ad73f914b5b3698b922f6836709bb3f5e1a94e6))
+* **deps:** update dependency https://github.com/bridgecrewio/checkov.git to v3.2.361 ([#542](https://github.com/defenseunicorns/build-harness/issues/542)) ([fb2b02f](https://github.com/defenseunicorns/build-harness/commit/fb2b02f0b1621af1e0601df63c9e4f8c51aef8f2))
+* **deps:** update dependency https://github.com/bridgecrewio/checkov.git to v3.2.362 ([#543](https://github.com/defenseunicorns/build-harness/issues/543)) ([7c90603](https://github.com/defenseunicorns/build-harness/commit/7c90603218879e41d38d03d8bed2116368c8d8d1))
+* **deps:** update dependency tflint to v0.55.1 ([#541](https://github.com/defenseunicorns/build-harness/issues/541)) ([46aa7fb](https://github.com/defenseunicorns/build-harness/commit/46aa7fbc60ab00886e8d0d32e1e0240c70dcbfe2))
+* **deps:** update ghcr.io/defenseunicorns/build-harness/build-harness docker tag to v2.1.2 ([#534](https://github.com/defenseunicorns/build-harness/issues/534)) ([1181268](https://github.com/defenseunicorns/build-harness/commit/1181268fd14fb39b3d3adb19b45b7facc51ce64c))
+* **deps:** update stable ([#537](https://github.com/defenseunicorns/build-harness/issues/537)) ([9ca3269](https://github.com/defenseunicorns/build-harness/commit/9ca3269f480e1ef7b1b97ddd430f6c1b533aa695))
+* **deps:** update stable ([#544](https://github.com/defenseunicorns/build-harness/issues/544)) ([760d38b](https://github.com/defenseunicorns/build-harness/commit/760d38bd04330549084eff1d35a2e34ac77c49b8))
+* **deps:** update stable to v1.157.0 ([#536](https://github.com/defenseunicorns/build-harness/issues/536)) ([50c1831](https://github.com/defenseunicorns/build-harness/commit/50c1831c92460ea76bf781e2c4efc3ad2dfef4c3))
+
 ## [2.1.2](https://github.com/defenseunicorns/build-harness/compare/2.1.1...2.1.2) (2025-01-30)
 
 
