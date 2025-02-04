@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.1.4](https://github.com/defenseunicorns/build-harness/compare/2.1.3...2.1.4) (2025-02-04)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency https://github.com/bridgecrewio/checkov.git to v3.2.364 ([#548](https://github.com/defenseunicorns/build-harness/issues/548)) ([b529112](https://github.com/defenseunicorns/build-harness/commit/b52911223b3d3b13492bc9775501190257266f7e))
+* **deps:** update ghcr.io/defenseunicorns/build-harness/build-harness docker tag to v2.1.3 ([#545](https://github.com/defenseunicorns/build-harness/issues/545)) ([69a8c02](https://github.com/defenseunicorns/build-harness/commit/69a8c029ab4589cf7aef87cde9ea4a357239bbe2))
+* **deps:** update stable to v3.2.363 ([#547](https://github.com/defenseunicorns/build-harness/issues/547)) ([7f9bf42](https://github.com/defenseunicorns/build-harness/commit/7f9bf429bf1fd7f016f9f0c5db29364d523f8320))
+
 ## [2.1.3](https://github.com/defenseunicorns/build-harness/compare/2.1.2...2.1.3) (2025-02-03)
 
 
