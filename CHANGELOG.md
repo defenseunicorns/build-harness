@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.1.5](https://github.com/defenseunicorns/build-harness/compare/2.1.4...2.1.5) (2025-02-05)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency awscli to v2.23.13 ([#551](https://github.com/defenseunicorns/build-harness/issues/551)) ([bd6d9f8](https://github.com/defenseunicorns/build-harness/commit/bd6d9f8ac36c2a7ce099695f56b79b262eef113d))
+* **deps:** update stable ([#549](https://github.com/defenseunicorns/build-harness/issues/549)) ([b1a1c4b](https://github.com/defenseunicorns/build-harness/commit/b1a1c4b01a58b5cb6aed7f99679a8c00c631ce7c))
+* **deps:** update stable ([#552](https://github.com/defenseunicorns/build-harness/issues/552)) ([9fdd7cf](https://github.com/defenseunicorns/build-harness/commit/9fdd7cf8a455b57c41d806ef5a5831f2ad99ec6f))
+
 ## [2.1.4](https://github.com/defenseunicorns/build-harness/compare/2.1.3...2.1.4) (2025-02-04)
 
 
