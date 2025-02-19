@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.1.5](https://github.com/defenseunicorns/build-harness/compare/2.1.4...2.1.5) (2025-02-19)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency awscli to v2.23.13 ([#551](https://github.com/defenseunicorns/build-harness/issues/551)) ([bd6d9f8](https://github.com/defenseunicorns/build-harness/commit/bd6d9f8ac36c2a7ce099695f56b79b262eef113d))
+* **deps:** update dependency ekristen/aws-nuke to v3.47.0 ([#554](https://github.com/defenseunicorns/build-harness/issues/554)) ([a9fe153](https://github.com/defenseunicorns/build-harness/commit/a9fe153f7482d6f7e5001693da1cadeba65499f5))
+* **deps:** update dependency https://github.com/bridgecrewio/checkov.git to v3.2.365 ([#553](https://github.com/defenseunicorns/build-harness/issues/553)) ([d44ec24](https://github.com/defenseunicorns/build-harness/commit/d44ec24ef08f9189ac4a0a968a0dc37536628441))
+* **deps:** update stable ([#549](https://github.com/defenseunicorns/build-harness/issues/549)) ([b1a1c4b](https://github.com/defenseunicorns/build-harness/commit/b1a1c4b01a58b5cb6aed7f99679a8c00c631ce7c))
+* **deps:** update stable ([#552](https://github.com/defenseunicorns/build-harness/issues/552)) ([9fdd7cf](https://github.com/defenseunicorns/build-harness/commit/9fdd7cf8a455b57c41d806ef5a5831f2ad99ec6f))
+* **deps:** update stable ([#555](https://github.com/defenseunicorns/build-harness/issues/555)) ([d211662](https://github.com/defenseunicorns/build-harness/commit/d21166230d089d72afc5da872b417de8028b6d0e))
+* **deps:** update stable ([#556](https://github.com/defenseunicorns/build-harness/issues/556)) ([02ab632](https://github.com/defenseunicorns/build-harness/commit/02ab632870b86101517a8b7ffa537a002841d580))
+
 ## [2.1.4](https://github.com/defenseunicorns/build-harness/compare/2.1.3...2.1.4) (2025-02-04)
 
 
