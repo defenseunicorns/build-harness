@@ -47,6 +47,30 @@ RUN ARCH_STRING=$(uname -m) \
   && dnf clean all \
   && rm -rf /var/cache/yum/
 
+# Trust the Department of Defense CA certificates from the specified ZIP archive
+RUN set -e && \
+    URL="https://dl.dod.cyber.mil/wp-content/uploads/pki-pke/zip/unclass-certificates_pkcs7_v5-6_dod.zip" && \
+    ZIP_FILE="dod_certs.zip" && \
+    EXTRACT_DIR="dod-certs" && \
+    TRUST_DIR="/etc/pki/ca-trust/source/anchors/" && \
+    curl -o "$ZIP_FILE" "$URL" && \
+    mkdir -p "$EXTRACT_DIR" && \
+    unzip -o "$ZIP_FILE" -d "$EXTRACT_DIR" && \
+    CERTS_DIR=$(find "$EXTRACT_DIR" -type d -name "Certificates_PKCS7*") && \
+    cd "$CERTS_DIR" && \
+    for p7b_file in *.p7b; do \
+        if [ "$(openssl asn1parse -inform DER -in "$p7b_file" 2>/dev/null)" ]; then \
+            openssl pkcs7 -inform DER -print_certs -in "$p7b_file" -out "${p7b_file%.p7b}.crt"; \
+        else \
+            openssl pkcs7 -print_certs -in "$p7b_file" -out "${p7b_file%.p7b}.crt"; \
+        fi; \
+    done && \
+    cp -v *.crt "$TRUST_DIR" && \
+    update-ca-trust extract && \
+    cd ../../ && \
+    rm -rf "$ZIP_FILE" "$EXTRACT_DIR" && \
+    echo "DoD certificates have been installed and trusted successfully."
+
 # Install Docker. To use Docker you need to run the 'docker run' command with '-v /var/run/docker.sock:/var/run/docker.sock' to mount the docker socket into the container.
 # WARNING: This is a security risk that requires other mitigations to be in place. See https://stackoverflow.com/a/41822163. Doing so will give the container root access to the host machine.
 # No additional security risk is posed if this container is run without mounting the docker socket.
@@ -57,29 +81,34 @@ RUN dnf config-manager --add-repo https://download.docker.com/linux/centos/docke
       && dnf clean all \
       && rm -rf /var/cache/yum/
 
-# Install asdf. Get versions from https://github.com/asdf-vm/asdf/releases
-# hadolint ignore=SC2016
-# renovate: datasource=github-tags depName=asdf-vm/asdf
-ENV ASDF_VERSION=0.16.3
-RUN git clone https://github.com/asdf-vm/asdf.git --branch v${ASDF_VERSION} --depth 1 "${HOME}/.asdf" \
-      && echo -e '\nsource $HOME/.asdf/asdf.sh' >> "${HOME}/.bashrc" \
-      && echo -e '\nsource $HOME/.asdf/asdf.sh' >> "${HOME}/.profile" \
-      && source "${HOME}/.asdf/asdf.sh"
-ENV PATH="/root/.asdf/shims:/root/.asdf/bin:${PATH}"
+
+# Fetch the latest ASDF version and install it
+RUN ASDF_VERSION=$(curl -s https://api.github.com/repos/asdf-vm/asdf/releases/latest | jq -r .tag_name) && \
+    ARCH=$(uname -m) && \
+    if [ "$ARCH" = "x86_64" ]; then \
+        ASDF_URL="https://github.com/asdf-vm/asdf/releases/download/${ASDF_VERSION}/asdf-${ASDF_VERSION}-linux-amd64.tar.gz"; \
+    elif [ "$ARCH" = "aarch64" ]; then \
+        ASDF_URL="https://github.com/asdf-vm/asdf/releases/download/${ASDF_VERSION}/asdf-${ASDF_VERSION}-linux-arm64.tar.gz"; \
+    else \
+        echo "Unsupported architecture: $ARCH"; exit 1; \
+    fi && \
+    curl -L "$ASDF_URL" -o /tmp/asdf.tar.gz && \
+    mkdir -p /usr/local/asdf && \
+    tar -xzf /tmp/asdf.tar.gz -C /usr/local/asdf && \
+    ln -sf /usr/local/asdf/asdf /usr/local/bin/asdf && \
+    rm -f /tmp/asdf.tar.gz
+ENV ASDF_DATA_DIR="/root/.asdf"
+ENV PATH="${ASDF_DATA_DIR}/shims:$PATH"
 
 # Copy our .tool-versions file into the container
 COPY .tool-versions /root/.tool-versions
 
-# Zarf needs to be added separately since it doesn't have a "shortform" option in the asdf registry yet
-RUN asdf plugin add zarf https://github.com/defenseunicorns/asdf-zarf.git
-# git-xargs needs to be added separately since it doesn't have a "shortform" option in the asdf registry yet
-RUN asdf plugin add git-xargs https://github.com/defenseunicorns/asdf-git-xargs.git
-# opentofu needs to be added separately since it doesn't have a "shortform" option in the asdf registry yet
-RUN asdf plugin add opentofu https://github.com/defenseunicorns/asdf-opentofu.git
-# uds-cli (uds) needs to be added separately since it doesn't have a "shortform" option in the asdf registry yet
-RUN asdf plugin add uds-cli https://github.com/defenseunicorns/asdf-uds-cli.git
-# atmos needs to be added separately since it doesn't have a "shortform" option in the asdf registry yet
-RUN asdf plugin add atmos https://github.com/cloudposse/asdf-atmos.git
+# These tools need to be added separately since they don't have a "shortform" option in the asdf registry yet
+RUN asdf plugin add zarf https://github.com/defenseunicorns/asdf-zarf.git && \
+    asdf plugin add git-xargs https://github.com/defenseunicorns/asdf-git-xargs.git && \
+    asdf plugin add opentofu https://github.com/defenseunicorns/asdf-opentofu.git && \
+    asdf plugin add uds-cli https://github.com/defenseunicorns/asdf-uds-cli.git && \
+    asdf plugin add atmos https://github.com/cloudposse/asdf-atmos.git
 
 # Install all other ASDF plugins that are present in the .tool-versions file.
 RUN cat /root/.tool-versions | \
@@ -98,8 +127,5 @@ RUN asdf install
 # renovate: datasource=pypi depName=sshuttle
 ENV SSHUTTLE_VERSION=1.1.1
 RUN pip install --force-reinstall -v "sshuttle==${SSHUTTLE_VERSION}"
-
-# Support tools installed as root when running as any other user
-ENV ASDF_DATA_DIR="/root/.asdf"
 
 CMD ["/bin/bash"]
