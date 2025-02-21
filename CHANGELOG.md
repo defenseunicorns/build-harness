@@ -1,5 +1,26 @@
 # Changelog
 
+## [3.0.0](https://github.com/defenseunicorns/build-harness/compare/2.1.6...3.0.0) (2025-02-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Dockerfile:** `asdf global <tool> <version>` is now `asdf set -u <tool> <version>`
+
+### Features
+
+* **Dockerfile:** add DoD CA certificates and improve ASDF setup ([#566](https://github.com/defenseunicorns/build-harness/issues/566)) ([8df18e5](https://github.com/defenseunicorns/build-harness/commit/8df18e5c7306942ba32f20d22e7eb962e0cc5af9))
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency dagger/dagger to v0.16.0 ([#562](https://github.com/defenseunicorns/build-harness/issues/562)) ([53b30b7](https://github.com/defenseunicorns/build-harness/commit/53b30b722191d9df7b6735d7eca05652aa4af999))
+* **deps:** update dependency dagger/dagger to v0.16.1 ([#563](https://github.com/defenseunicorns/build-harness/issues/563)) ([813bccd](https://github.com/defenseunicorns/build-harness/commit/813bccd4c166712586be4bd7db176784204b7532))
+* **deps:** update dependency flux2 to v2.5.0 ([#564](https://github.com/defenseunicorns/build-harness/issues/564)) ([fc8fc73](https://github.com/defenseunicorns/build-harness/commit/fc8fc735ff490da8d39cac448dd6a16082e7e8c3))
+* **deps:** update ghcr.io/defenseunicorns/build-harness/build-harness docker tag to v2.1.5 ([#559](https://github.com/defenseunicorns/build-harness/issues/559)) ([3bb1233](https://github.com/defenseunicorns/build-harness/commit/3bb1233a02855465e1621bcf882cb8ad80dcb4f4))
+* **deps:** update stable ([#561](https://github.com/defenseunicorns/build-harness/issues/561)) ([09933c5](https://github.com/defenseunicorns/build-harness/commit/09933c5a97e42da6c25cfe64b754f7e0b943273f))
+* **deps:** update stable ([#565](https://github.com/defenseunicorns/build-harness/issues/565)) ([2297e93](https://github.com/defenseunicorns/build-harness/commit/2297e93d3e92429a621e0ce9e011b4856bd6b12c))
+
 ## [2.1.6](https://github.com/defenseunicorns/build-harness/compare/2.1.5...2.1.6) (2025-02-19)
 
 
