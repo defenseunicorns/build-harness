@@ -49,14 +49,14 @@ RUN ARCH_STRING=$(uname -m) \
 
 # Trust the Department of Defense CA certificates from the specified ZIP archive
 RUN set -e && \
-    URL="https://dl.dod.cyber.mil/wp-content/uploads/pki-pke/zip/unclass-certificates_pkcs7_v5-6_dod.zip" && \
+    URL="https://dl.dod.cyber.mil/wp-content/uploads/pki-pke/zip/unclass-certificates_pkcs7_DoD.zip" && \
     ZIP_FILE="dod_certs.zip" && \
     EXTRACT_DIR="dod-certs" && \
     TRUST_DIR="/etc/pki/ca-trust/source/anchors/" && \
     curl -o "$ZIP_FILE" "$URL" && \
     mkdir -p "$EXTRACT_DIR" && \
     unzip -o "$ZIP_FILE" -d "$EXTRACT_DIR" && \
-    CERTS_DIR=$(find "$EXTRACT_DIR" -type d -name "Certificates_PKCS7*") && \
+    CERTS_DIR=$(find "$EXTRACT_DIR" -type d -name "certificates_pkcs7*") && \
     cd "$CERTS_DIR" && \
     for p7b_file in *.p7b; do \
         if [ "$(openssl asn1parse -inform DER -in "$p7b_file" 2>/dev/null)" ]; then \
