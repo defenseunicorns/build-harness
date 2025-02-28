@@ -59,11 +59,11 @@ RUN set -e && \
     CERTS_DIR=$(find "$EXTRACT_DIR" -type d -name "certificates_pkcs7*") && \
     cd "$CERTS_DIR" && \
     for p7b_file in *.p7b; do \
-      if [ "$(openssl asn1parse -inform DER -in "$p7b_file" 2>/dev/null)" ]; then \
-        openssl pkcs7 -inform DER -print_certs -in "$p7b_file" -out "${p7b_file%.p7b}.crt"; \
-      else \
-        openssl pkcs7 -print_certs -in "$p7b_file" -out "${p7b_file%.p7b}.crt"; \
-      fi; \
+        if [ "$(openssl asn1parse -inform DER -in "$p7b_file" 2>/dev/null)" ]; then \
+            openssl pkcs7 -inform DER -print_certs -in "$p7b_file" -out "${p7b_file%.p7b}.crt"; \
+        else \
+            openssl pkcs7 -print_certs -in "$p7b_file" -out "${p7b_file%.p7b}.crt"; \
+        fi; \
     done && \
     cp -v *.crt "$TRUST_DIR" && \
     update-ca-trust extract && \
