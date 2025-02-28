@@ -49,27 +49,27 @@ RUN ARCH_STRING=$(uname -m) \
 
 # Trust the Department of Defense CA certificates from the specified ZIP archive
 RUN set -e && \
-    URL="https://dl.dod.cyber.mil/wp-content/uploads/pki-pke/zip/unclass-certificates_pkcs7_v5-6_dod.zip" && \
-    ZIP_FILE="dod_certs.zip" && \
-    EXTRACT_DIR="dod-certs" && \
-    TRUST_DIR="/etc/pki/ca-trust/source/anchors/" && \
-    curl -o "$ZIP_FILE" "$URL" && \
-    mkdir -p "$EXTRACT_DIR" && \
-    unzip -o "$ZIP_FILE" -d "$EXTRACT_DIR" && \
-    CERTS_DIR=$(find "$EXTRACT_DIR" -type d -name "Certificates_PKCS7*") && \
-    cd "$CERTS_DIR" && \
-    for p7b_file in *.p7b; do \
-        if [ "$(openssl asn1parse -inform DER -in "$p7b_file" 2>/dev/null)" ]; then \
-            openssl pkcs7 -inform DER -print_certs -in "$p7b_file" -out "${p7b_file%.p7b}.crt"; \
-        else \
-            openssl pkcs7 -print_certs -in "$p7b_file" -out "${p7b_file%.p7b}.crt"; \
-        fi; \
-    done && \
-    cp -v *.crt "$TRUST_DIR" && \
-    update-ca-trust extract && \
-    cd ../../ && \
-    rm -rf "$ZIP_FILE" "$EXTRACT_DIR" && \
-    echo "DoD certificates have been installed and trusted successfully."
+  URL="https://dl.dod.cyber.mil/wp-content/uploads/pki-pke/zip/unclass-certificates_pkcs7_DoD.zip" && \
+  ZIP_FILE="dod_certs.zip" && \
+  EXTRACT_DIR="dod-certs" && \
+  TRUST_DIR="/etc/pki/ca-trust/source/anchors/" && \
+  curl -o "$ZIP_FILE" "$URL" && \
+  mkdir -p "$EXTRACT_DIR" && \
+  unzip -o "$ZIP_FILE" -d "$EXTRACT_DIR" && \
+  CERTS_DIR=$(find "$EXTRACT_DIR" -type d -name "certificates_pkcs7*") && \
+  cd "$CERTS_DIR" && \
+  for p7b_file in *.p7b; do \
+    if [ "$(openssl asn1parse -inform DER -in "$p7b_file" 2>/dev/null)" ]; then \
+      openssl pkcs7 -inform DER -print_certs -in "$p7b_file" -out "${p7b_file%.p7b}.crt"; \
+    else \
+      openssl pkcs7 -print_certs -in "$p7b_file" -out "${p7b_file%.p7b}.crt"; \
+    fi; \
+  done && \
+  cp -v *.crt "$TRUST_DIR" && \
+  update-ca-trust extract && \
+  cd ../../ && \
+  rm -rf "$ZIP_FILE" "$EXTRACT_DIR" && \
+  echo "DoD certificates have been installed and trusted successfully."
 
 # Install Docker. To use Docker you need to run the 'docker run' command with '-v /var/run/docker.sock:/var/run/docker.sock' to mount the docker socket into the container.
 # WARNING: This is a security risk that requires other mitigations to be in place. See https://stackoverflow.com/a/41822163. Doing so will give the container root access to the host machine.
