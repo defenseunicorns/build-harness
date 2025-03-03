@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.0.2](https://github.com/defenseunicorns/build-harness/compare/3.0.1...3.0.2) (2025-03-03)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency golangci-lint to v1.64.6 ([#586](https://github.com/defenseunicorns/build-harness/issues/586)) ([8dc7568](https://github.com/defenseunicorns/build-harness/commit/8dc75685ec6cc1c5d1c115ca5950e4fdf3241b3f))
+* **deps:** update dependency https://github.com/bridgecrewio/checkov.git to v3.2.379 ([#587](https://github.com/defenseunicorns/build-harness/issues/587)) ([8b1efb1](https://github.com/defenseunicorns/build-harness/commit/8b1efb13f0bc4e1e4a1227fc3e92cb5479cf453b))
+* **deps:** update ghcr.io/defenseunicorns/build-harness/build-harness docker tag to v3.0.1 ([#583](https://github.com/defenseunicorns/build-harness/issues/583)) ([b6cd78e](https://github.com/defenseunicorns/build-harness/commit/b6cd78e8e1c35ec0b13ce1ebc8ca0161662e7b5e))
+* **deps:** update stable to v1.165.0 ([#585](https://github.com/defenseunicorns/build-harness/issues/585)) ([c2f1f26](https://github.com/defenseunicorns/build-harness/commit/c2f1f2682d2e82fdb17d802f4062fab8009e5f1e))
+
 ## [3.0.1](https://github.com/defenseunicorns/build-harness/compare/3.0.0...3.0.1) (2025-02-28)
 
 
