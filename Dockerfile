@@ -56,7 +56,7 @@ RUN set -e && \
     curl -o "$ZIP_FILE" "$URL" && \
     mkdir -p "$EXTRACT_DIR" && \
     unzip -o "$ZIP_FILE" -d "$EXTRACT_DIR" && \
-    CERTS_DIR=$(find "$EXTRACT_DIR" -type d -name "certificates_pkcs7*") && \
+    CERTS_DIR=$(find "$EXTRACT_DIR" -type d -name "Certificates_PKCS7*") && \
     cd "$CERTS_DIR" && \
     for p7b_file in *.p7b; do \
         if [ "$(openssl asn1parse -inform DER -in "$p7b_file" 2>/dev/null)" ]; then \
