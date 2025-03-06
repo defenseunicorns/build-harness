@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.1.0](https://github.com/defenseunicorns/build-harness/compare/3.0.2...3.1.0) (2025-03-06)
+
+
+### Features
+
+* add gitlab cli ([7256990](https://github.com/defenseunicorns/build-harness/commit/72569903f1d76afd20c48bd7eeaca3ae3975f267))
+
+
+### Bug Fixes
+
+* **dod-certs:** fix dod cert trust ([7256990](https://github.com/defenseunicorns/build-harness/commit/72569903f1d76afd20c48bd7eeaca3ae3975f267))
+
 ## [3.0.2](https://github.com/defenseunicorns/build-harness/compare/3.0.1...3.0.2) (2025-03-03)
 
 
