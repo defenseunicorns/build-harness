@@ -11,6 +11,8 @@ dagger 0.16.2
 flux2 2.5.1
 # renovate: datasource=github-tags depName=gruntwork-io/git-xargs
 git-xargs 0.1.15
+# renovate: datasource=git-tags depName=https://gitlab.com/gitlab-org/cli.git
+glab 1.53.0
 golang 1.24.0
 golangci-lint 1.64.6
 # renovate: datasource=github-tags depName=anchore/grype
